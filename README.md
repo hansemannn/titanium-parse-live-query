@@ -22,6 +22,7 @@ to create universal "fat" frameworks and strip the unused architectures again (t
 A universal library can be created by grabbing the frameworks from `Debug-iphonesimulator` (Simulator architectures) 
 and `Debug-iphoneos` (Device architectures) and combine them using the following commands:
 
+0. Install CocoaPods (`sudo gem install cocoapods`) and run `pod install` in the `native/` directory of this repository
 1. Create the following folder structures: `sim/`, `device/` & `universal/`
 2. Copy the .framework files from `Debug-iphonesimulator` to `sim/`
 3. Copy the .framework files from `Debug-iphoneos` to `device/`
