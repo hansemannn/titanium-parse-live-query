@@ -1,0 +1,14 @@
+tmp
+bin
+build
+*.zip
+.DS_Store
+.project
+android/libs
+android/build.properties
+android/dist
+/ios/metadata.json
+ios/TouchID.xcodeproj/xcuserdata
+ios/TouchID.xcodeproj/project.xcworkspace/xcuserdata
+/android/java-sources.txt
+ios/titanium-identity.xcodeproj/project.xcworkspace/*
