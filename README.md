@@ -48,10 +48,9 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 
 #####  `isConnected()` -> Boolean
 
-##### `subscribeToQuery(args)`
+##### `subscribeToQuery(query)`
 
-- `className` (String)
-- `query` (String)
+- `query` (`Query`)
 
 ##### `unsubscribeFromQuery(args)`
 
@@ -62,16 +61,37 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 
 ##### `subscribe`
 
+- `query` (`Query`)
+
 ##### `unsubscribe`
+
+- `query` (`Query`)
 
 ##### `event`
 
 - `type` (`EVENT_TYPE_*`)
 - `object` (`Object`)
+- `query` (`Query`)
 
 ##### `error`
 
 - `error` (String)
+- `query` (`Query`)
+
+---
+
+### `Query`
+
+#### Initializer (`createQuery(args)`)
+
+- `className` (String)
+- `predicate` (String, optional, e.g. `name = "hans"`)
+
+#### Methods
+
+##### `findObjectsInBackground(callback)`
+
+- `callback` (Function)
 
 ---
 
