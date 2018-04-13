@@ -1,6 +1,7 @@
 # Parse Live Query in Titanium
 
-Use the Parse & Parse Live Query iOS SDK's in Axway Titanium!
+Use the Parse & Parse Live Query iOS SDK's in Axway Titanium! Read more about the Parse Live Query API 
+in the [official native repository](https://github.com/parse-community/ParseLiveQuery-iOS-OSX).
 
 ## API'S
 
