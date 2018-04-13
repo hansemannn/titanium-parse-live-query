@@ -155,7 +155,7 @@ var btn2 = Ti.UI.createButton({
 
 btn1.addEventListener('click', function() {
   ParseLiveQuery.initialize({
-    applicationKey: 'YOUR_APP_KEY',
+    applicationId: 'YOUR_APP_KEY',
     clientKey: 'YOUR_CLIENT_KEY',
     server: 'YOUR_SERVER_URL'
   });
@@ -163,7 +163,7 @@ btn1.addEventListener('click', function() {
   
 btn2.addEventListener('click', function() {
   var client = ParseLiveQuery.createClient({
-    applicationKey: 'YOUR_APP_KEY',
+    applicationId: 'YOUR_APP_KEY',
     clientKey: 'YOUR_CLIENT_KEY',
     server: 'YOUR_SERVER_URL'
   });

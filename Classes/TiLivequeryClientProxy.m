@@ -15,11 +15,11 @@
   if (_client == nil) {
     NSString *server = [self valueForKey:@"server"];
     NSString *applicationId = [self valueForKey:@"applicationId"];
-    NSString *clientId = [self valueForKey:@"clientId"];
+    NSString *clientKey = [self valueForKey:@"clientKey"];
 
     _client = [[PFLiveQueryClient alloc] initWithServer:server
                                 applicationId:applicationId
-                                    clientKey:clientId];
+                                    clientKey:clientKey];
   }
   
   return _client;
