@@ -2,7 +2,99 @@
 
 Use the Parse & Parse Live Query iOS SDK's in Axway Titanium!
 
-> Warning! This module is only a proof of concept so far and does not export all possible API's.
+## API'S
+
+### Root-Module
+
+#### Methods
+
+##### `initialize(args: Dictionary)`
+
+- `applicationId` (String)
+- `clientKey` (String)
+- `server` (String)
+- `localDatastoreEnabled` (Boolean)
+
+##### `createClient(args: Dictionary)`
+
+- `applicationId` (String)
+- `clientKey` (String)
+- `server` (String)
+
+#####  `saveObject(args)`
+
+- `className` (String)
+- `parameters` (Dictionary)
+- `callback` (Function)
+
+#### Constants
+
+##### EVENT_TYPE_ENTERED
+##### EVENT_TYPE_LEFT
+##### EVENT_TYPE_CREATED
+##### EVENT_TYPE_UPDATED
+##### EVENT_TYPE_DELETED
+
+---
+
+### `Client`
+
+#### Methods
+
+#####  `reconnect()`
+
+#####  `disconnect()`
+
+#####  `isConnected()` -> Boolean
+
+##### `subscribeToQuery(args)`
+
+- `className`
+
+##### `unsubscribeFromQuery(args)`
+
+- `className`
+
+#### Events
+
+##### `subscribe`
+
+##### `unsubscribe`
+
+##### `event`
+
+- `type` (`EVENT_TYPE_*`)
+- `object` (`Object`)
+
+##### `error`
+
+- `error` (String)
+
+---
+
+### `Object`
+
+#### Properties
+
+##### `parseClassName` (String)
+
+##### `objectId` (String)
+
+##### `createdAt` (String)
+
+##### `updatedAt` (String)
+
+##### `allKeys` (Array<String>)
+
+#### Methods
+
+##### `objectForKey(key)` -> Any
+
+##### `setObjectForKey(object, key)`
+
+##### `removeObjectForKey(key)` 
+
+##### `deleteObject()` 
 
 ## Compile Swift Libraries
 
@@ -48,19 +140,55 @@ var win = Ti.UI.createWindow({
   backgroundColor: '#fff'
 });
 
-var btn = Ti.UI.createButton({
-  title: 'Initialize Parse'
+var btn1 = Ti.UI.createButton({
+  title: 'Initialize Parse',
+  top: 100
 });
 
-btn.addEventListener('click', function() {
+var btn2 = Ti.UI.createButton({
+  title: 'Subscribe to Class',
+  top: 200
+});
+
+btn1.addEventListener('click', function() {
   ParseLiveQuery.initialize({
     applicationKey: 'YOUR_APP_KEY',
     clientKey: 'YOUR_CLIENT_KEY',
     server: 'YOUR_SERVER_URL'
   });
 });
+  
+btn2.addEventListener('click', function() {
+  var client = ParseLiveQuery.createClient({
+    applicationKey: 'YOUR_APP_KEY',
+    clientKey: 'YOUR_CLIENT_KEY',
+    server: 'YOUR_SERVER_URL'
+  });
+  
+  client.addEventListener('subscribe', function(e) {
+    // Subscribed
+  });
+  
+  client.addEventListener('unsubscribe', function(e) {
+    // Unsubscribed
+  });
+  
+  client.addEventListener('event', function(e) {
+    // Event received, check with e.type
+  });
+  
+  client.addEventListener('error', function(e) {
+    // Error received, check with e.error
+  });
+  
+  client.subscribeToQuery({
+    className: 'YOUR_CLASS_NAME'
+  });
+});
 
-win.add(btn);
+win.add(btn1);
+win.add(btn2);
+
 win.open();
 ```
 
