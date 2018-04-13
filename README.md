@@ -50,11 +50,13 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 
 ##### `subscribeToQuery(args)`
 
-- `className`
+- `className` (String)
+- `query` (String)
 
 ##### `unsubscribeFromQuery(args)`
 
-- `className`
+- `className` (String)
+- `query` (String)
 
 #### Events
 
