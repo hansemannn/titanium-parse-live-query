@@ -3,6 +3,11 @@
 Use the Parse & Parse Live Query iOS SDK's in Axway Titanium! Read more about the Parse Live Query API 
 in the [official native repository](https://github.com/parse-community/ParseLiveQuery-iOS-OSX).
 
+## Requirements
+
+- [x] Swift 4.1 or later (embedded into the hook in `hooks/`)
+- [x] Titanium SDK 6.3.0 or later (7.1.0.GA used in testing)
+
 ## API'S
 
 ### Root-Module

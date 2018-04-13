@@ -20,7 +20,11 @@ function init(logger, config, cli, appc) {
 			logger.info('Enabling Swift support ...');
 
 			var xobjs = data.args[0].hash.project.objects;
-			var SWIFT_VERSION = 3.1; // Change to desired Swift version
+			
+			// ---
+			// Change to desired Swift version
+			var SWIFT_VERSION = 4.1;
+			/// ---
 															
 			Object.keys(xobjs.PBXNativeTarget).forEach(function (targetUuid) {
 				var target = xobjs.PBXNativeTarget[targetUuid];
