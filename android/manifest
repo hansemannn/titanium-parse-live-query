@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 4
+architectures: arm64-v8a armeabi-v7a x86
+description: titanium-parse-live-query
+author: Hans Knöchel
+license: Apache 2
+copyright: Copyright (c) 2018 by Hans Knöchel
+
+# these should not be edited
+name: titanium-parse-live-query
+moduleid: ti.livequery
+guid: 78df4bfc-1945-4f8e-97a7-af483c88a8cf
+platform: android
+minsdk: 7.0.0

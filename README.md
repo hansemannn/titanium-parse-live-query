@@ -1,12 +1,36 @@
 # Parse Live Query in Titanium
 
-Use the Parse & Parse Live Query iOS SDK's in Axway Titanium! Read more about the Parse Live Query API 
-in the [official native repository](https://github.com/parse-community/ParseLiveQuery-iOS-OSX).
+Use the Parse & Parse Live Query iOS and Android SDK's in Axway Titanium! Read more about the Parse Live Query API 
+in the official native repositories:
+
+- iOS: https://github.com/parse-community/ParseLiveQuery-iOS-OSX
+- Android: https://github.com/parse-community/ParseLiveQuery-Android
+
+> Warning: While iOS is ready for production, Android is highly dependent on community contributions. Submit a pull request
+to expose new features, e.g. query subscriptions.
 
 ## Requirements
 
-- [x] Swift 4.1 or later (embedded into the hook in `hooks/`)
-- [x] Titanium SDK 6.3.0 or later (7.1.0.GA used in testing)
+- [x] iOS: Swift 4.1+ (embedded into the hook in `hooks/`), iOS 8+
+- [x] Android: Gradle, Android 4.1+
+- [x] Titanium SDK 6.3.0+ (7.0.0+ for Android)
+
+## Setup
+
+### iOS
+
+No additional setup required.
+
+### Android
+
+Add the following to the `<android>` manifest section of the tiapp.xml:
+```xml
+<application ...>
+  ...
+  <meta-data android:name="com.parse.SERVER_URL" android:value="YOUR_SERVER_URL" />
+  <meta-data android:name="com.parse.APPLICATION_ID" android:value="YOUR_APP_ID" />
+</application>
+```
 
 ## API'S
 
@@ -21,7 +45,7 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 - `server` (String)
 - `localDatastoreEnabled` (Boolean)
 
-##### `createClient(args: Dictionary)`
+##### `createClient(args: Dictionary)` **iOS only**
 
 - `applicationId` (String)
 - `clientKey` (String)
@@ -33,7 +57,9 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 - `parameters` (Dictionary)
 - `callback` (Function)
 
-#### Constants
+##### `clearAllCachedResults()`
+
+#### Constants **iOS only**
 
 ##### EVENT_TYPE_ENTERED
 ##### EVENT_TYPE_LEFT
@@ -43,7 +69,7 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 
 ---
 
-### `Client`
+### `Client` **iOS only**
 
 #### Methods
 
@@ -62,7 +88,7 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 - `className` (String)
 - `query` (String)
 
-#### Events
+#### Events **iOS only**
 
 ##### `subscribe`
 
@@ -85,7 +111,7 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 
 ---
 
-### `Query`
+### `Query` **iOS only**
 
 #### Initializer (`createQuery(args)`)
 
@@ -98,9 +124,11 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 
 - `callback` (Function)
 
+##### `clearCachedResult()`
+
 ---
 
-### `Object`
+### `Object` **iOS only**
 
 #### Properties
 
@@ -124,7 +152,9 @@ in the [official native repository](https://github.com/parse-community/ParseLive
 
 ##### `deleteObject()` 
 
-## Compile Swift Libraries
+## Compile native libraries
+
+### iOS
 
 This project uses the following 5 Swift dependencies:
 
@@ -159,6 +189,12 @@ These steps are based on a [Shell Script](https://gist.github.com/cromandini/1a9
 
 Note: In the future, this will all be done by CocoaPods. Make sure to follow [TIMOB-25927](https://jira.appcelerator.org/browse/TIMOB-25927) regarding Swift support in the SDK.
 
+### Android
+
+0. Install Gradle and go to `android/`
+1. Run `gradle getDeps`
+2. Validate that the libraries are copied to `lib/`
+
 ## Example
 
 ```js
@@ -186,6 +222,7 @@ btn1.addEventListener('click', function() {
   });
 });
 
+// iOS only
 btn2.addEventListener('click', function() {
   var client = ParseLiveQuery.createClient({
     applicationId: '',
