@@ -15,13 +15,13 @@ to expose new features, e.g. query subscriptions.
 - [x] Android: Gradle, Android 4.1+
 - [x] Titanium SDK 6.3.0+ (7.0.0+ for Android)
 
-## Usage with other Modules
+## Usage with Ti.Facenook
 
 If you use this module together with Ti.Facebook, you need to remove the `Bolts.framework` from
 ```
-<project>/modules/iphone/ti.livequery/<version>/platform/Bolts.framework
+<project>/modules/iphone/ti.facebook/<version>/platform/Bolts.framework
 ```
-since it is already bundled with Ti.Facebook. Remember: In case you remove Ti.Facebook, put the framework
+since it is already bundled with Ti.LiveQuery. Remember: In case you remove Ti.LiveQuery, put the framework
 back in our replace it with a fresh module version that contains the framework.
 
 ## Setup
