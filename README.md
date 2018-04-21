@@ -126,6 +126,17 @@ Add the following to the `<android>` manifest section of the tiapp.xml:
 
 - `className` (String)
 - `predicate` (String, optional, e.g. `name = "hans"`)
+- `predicateArguments` (String, optional, e.g. `myUsers`)
+
+Note: When using `predicateArguments`, you write a template based placeholder inside the `predicate` parameter
+and fill it with the arguments passed in `predicateArguments`, e.g.
+```
+var query = LiveQuery.createQuery({
+  className: 'User',
+  predicate: 'userId in %@'
+  predicateArguments: users // an array of users
+});
+```
 
 #### Methods
 
