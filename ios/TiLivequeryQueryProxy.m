@@ -25,8 +25,11 @@
     NSDictionary *params = [args objectAtIndex:0];
     NSString *className = [params objectForKey:@"className"];
     NSString *predicate = [params objectForKey:@"predicate"];
+    NSString *predicateArguments = [params objectForKey:@"predicateArguments"];
+
+    NSString *predicateFormat = [NSString stringWithFormat:predicate, predicateArguments];
     
-    _query = [PFQuery queryWithClassName:className predicate:predicate ? [NSPredicate predicateWithFormat:predicate] : nil];
+    _query = [PFQuery queryWithClassName:className predicate:predicate ? [NSPredicate predicateWithFormat:predicateFormat] : nil];
   }
   
   return self;
