@@ -32,4 +32,6 @@
 
 - (NSNumber *)deleteObject:(id)unused;
 
+- (NSNumber *)saveObject:(id)unused;
+
 @end

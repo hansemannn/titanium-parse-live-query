@@ -63,9 +63,32 @@
   return [_object removeObjectForKey:key];
 }
 
-- (NSNumber *)deleteObject:(id)unused
+- (NSNumber *)deleteObject:(id)value
 {
-  return @([_object delete]);
+  ENSURE_TYPE_OR_NIL(value, KrollCallback);
+
+  if (value == nil) {
+    return @([_object delete]);
+  } else {
+    [_object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+      [value call:@[@{ @"success": @(succeeded), @"error": error ? error.localizedDescription : [NSNull null] }] thisObject:self];
+    }];
+    return nil;
+  }
+}
+
+- (NSNumber *)saveObject:(id)value
+{
+  ENSURE_TYPE_OR_NIL(value, KrollCallback);
+
+  if (value == nil) {
+    return @([_object save]);
+  } else {
+    [_object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+      [value call:@[@{ @"success": @(succeeded), @"error": error ? error.localizedDescription : [NSNull null] }] thisObject:self];
+    }];
+    return nil;
+  }
 }
 
 @end

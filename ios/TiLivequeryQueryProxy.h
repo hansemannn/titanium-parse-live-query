@@ -26,13 +26,37 @@
 
 - (TiLivequeryQueryProxy *)whereKeyContainsAllObjectsInArray:(id)args;
 
+- (TiLivequeryQueryProxy *)whereKeyNotContainedIn:(id)args;
+
 - (TiLivequeryQueryProxy *)whereKeyEqualTo:(id)args;
 
-- (TiLivequeryQueryProxy *)includeKeys:(id)args;
-  
+- (TiLivequeryQueryProxy *)whereKeyNotEqualTo:(id)args;
+
+- (TiLivequeryQueryProxy *)whereKeyLessThan:(id)args;
+
+- (TiLivequeryQueryProxy *)whereKeyLessThanOrEqualTo:(id)args;
+
+- (TiLivequeryQueryProxy *)whereKeyGreaterThan:(id)args;
+
+- (TiLivequeryQueryProxy *)whereKeyGreaterThanOrEqualTo:(id)args;
+
 - (TiLivequeryQueryProxy *)whereKeyExists:(id)args;
 
+- (TiLivequeryQueryProxy *)whereKeyDoesNotExist:(id)args;
+
+- (TiLivequeryQueryProxy *)includeKeys:(id)args;
+
+- (TiLivequeryQueryProxy *)selectKeys:(id)args;
+
+- (TiLivequeryQueryProxy *)orderByAscending:(id)key;
+
+- (TiLivequeryQueryProxy *)orderByDescending:(id)key;
+
 - (void)clearCachedResult:(id)unused;
+
+- (void)setLimit:(id)limit;
+
+- (void)setSkip:(id)skip;
 
 - (void)findObjectsInBackground:(id)callback;
 

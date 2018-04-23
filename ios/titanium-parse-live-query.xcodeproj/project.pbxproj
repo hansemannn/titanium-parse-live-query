@@ -125,16 +125,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				24DE9E0F11C5FE74003F90F6 /* TiLivequeryModuleAssets.h */,
-				24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */,
-				24DD6CF71134B3F500162E58 /* TiLivequeryModule.h */,
-				24DD6CF81134B3F500162E58 /* TiLivequeryModule.m */,
-				DB9F1F022080CC2C002C2AA1 /* TiLivequeryQueryProxy.h */,
-				DB9F1F032080CC2C002C2AA1 /* TiLivequeryQueryProxy.m */,
-				DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */,
-				DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */,
-				DBBA692420809E3700F8B67B /* TiLivequeryObjectProxy.h */,
-				DBBA692520809E3700F8B67B /* TiLivequeryObjectProxy.m */,
+				DBC8A09A208E0B34007EAC38 /* Module */,
+				DBC8A099208E0B2D007EAC38 /* Query */,
+				DBC8A098208E0B29007EAC38 /* Client */,
+				DBC8A097208E0B23007EAC38 /* Object */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -142,10 +136,48 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				24DE9E0F11C5FE74003F90F6 /* TiLivequeryModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */,
 				AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */,
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		DBC8A097208E0B23007EAC38 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				DBBA692420809E3700F8B67B /* TiLivequeryObjectProxy.h */,
+				DBBA692520809E3700F8B67B /* TiLivequeryObjectProxy.m */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
+		DBC8A098208E0B29007EAC38 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */,
+				DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		DBC8A099208E0B2D007EAC38 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				DB9F1F022080CC2C002C2AA1 /* TiLivequeryQueryProxy.h */,
+				DB9F1F032080CC2C002C2AA1 /* TiLivequeryQueryProxy.m */,
+			);
+			name = Query;
+			sourceTree = "<group>";
+		};
+		DBC8A09A208E0B34007EAC38 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				24DD6CF71134B3F500162E58 /* TiLivequeryModule.h */,
+				24DD6CF81134B3F500162E58 /* TiLivequeryModule.m */,
+			);
+			name = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

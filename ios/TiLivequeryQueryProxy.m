@@ -7,6 +7,7 @@
 
 #import "TiLivequeryQueryProxy.h"
 #import "TiLivequeryObjectProxy.h"
+#import "TiUtils.h"
 
 @implementation TiLivequeryQueryProxy
 
@@ -66,24 +67,75 @@
   return self;
 }
 
-- (TiLivequeryQueryProxy *)whereKeyEqualTo:(id)args
-  {
-    NSString *key = [args objectAtIndex:0];
-    id equalTo = [args objectAtIndex:1];
-    
-    _query = [[self query] whereKey:key equalTo:equalTo];
-    
-    return self;
-  }
+- (TiLivequeryQueryProxy *)whereKeyNotContainedIn:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  NSArray *containedIn = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key notContainedIn:containedIn];
+  
+  return self;
+}
 
-  - (TiLivequeryQueryProxy *)includeKeys:(id)args
-  {
-    NSArray *keys = [args objectAtIndex:0];
-    
-    _query = [[self query] includeKeys:keys];
-    
-    return self;
-  }
+- (TiLivequeryQueryProxy *)whereKeyEqualTo:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  id equalTo = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key equalTo:equalTo];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)whereKeyNotEqualTo:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  id equalTo = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key notEqualTo:equalTo];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)whereKeyLessThan:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  id object = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key lessThan:object];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)whereKeyLessThanOrEqualTo:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  id object = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key lessThanOrEqualTo:object];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)whereKeyGreaterThan:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  id object = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key greaterThan:object];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)whereKeyGreaterThanOrEqualTo:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  id object = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key greaterThanOrEqualTo:object];
+  
+  return self;
+}
 
 - (TiLivequeryQueryProxy *)whereKeyExists:(id)args
 {
@@ -94,9 +146,68 @@
   return self;
 }
 
+- (TiLivequeryQueryProxy *)whereKeyDoesNotExist:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  
+  _query = [[self query] whereKeyDoesNotExist:key];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)includeKeys:(id)args
+{
+  NSArray *keys = [args objectAtIndex:0];
+  
+  _query = [[self query] includeKeys:keys];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)selectKeys:(id)args
+{
+  NSArray *keys = [args objectAtIndex:0];
+  
+  _query = [[self query] selectKeys:keys];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)orderByAscending:(id)key
+{
+  ENSURE_SINGLE_ARG(key, NSString);
+  
+  _query = [[self query] orderByAscending:key];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)orderByDescending:(id)key
+{
+  ENSURE_SINGLE_ARG(key, NSString);
+  
+  _query = [[self query] orderByDescending:key];
+  
+  return self;
+}
+
 - (void)clearCachedResult:(id)unused
 {
   [_query clearCachedResult];
+}
+
+- (void)setLimit:(id)limit
+{
+  ENSURE_TYPE(limit, NSNumber);
+  
+  [_query setLimit:[TiUtils intValue:limit]];
+}
+
+- (void)setSkip:(id)skip
+{
+  ENSURE_TYPE(skip, NSNumber);
+  
+  [_query setSkip:[TiUtils intValue:skip]];
 }
 
 - (void)findObjectsInBackground:(id)callback

@@ -55,7 +55,7 @@ btn2.addEventListener('click', function() {
 
   var query = ParseLiveQuery.createQuery({
     className: 'Users'
-  }).whereKeyContainsAllObjectsInArray('users', ['userId1', 'userId2']])
+  }).whereKeyContainsAllObjectsInArray('users', ['userId1', 'userId2']]); // Chaining is supported!
 
   client.subscribeToQuery(query);
 });

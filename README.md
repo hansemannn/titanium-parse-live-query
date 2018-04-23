@@ -147,6 +147,11 @@ Note: If you use predicates, you may constraint your query for additional `where
 - `key` (String)
 - `array` (Array<Any>)
 
+##### `whereKeyNotContainedIn(key, array)` -> `Query`
+
+- `key` (String)
+- `array` (Array<Any>)
+
 ##### `whereKeyContainsAllObjectsInArray(key, array)` -> `Query`
 
 - `key` (String)
@@ -157,13 +162,54 @@ Note: If you use predicates, you may constraint your query for additional `where
 - `key` (String)
 - `object` (Any)
 
+##### `whereKeyNotEqualTo(key, object)` -> `Query`
+
+- `key` (String)
+- `object` (Any)
+
+##### `whereKeyLessThan(key, object)` -> `Query`
+
+- `key` (String)
+- `object` (Any)
+
+##### `whereKeyLessThanOrEqualTo(key, object)` -> `Query`
+
+- `key` (String)
+- `object` (Any)
+
+##### `whereKeyGreaterThan(key, object)` -> `Query`
+
+- `key` (String)
+- `object` (Any)
+
+##### `whereKeyGreaterThanOrEqualTo(key, object)` -> `Query`
+
+- `key` (String)
+- `object` (Any)
+
 ##### `whereKeyExists(key)` -> `Query`
+
+- `key` (String)
+
+##### `whereKeyDoesNotExist(key)` -> `Query`
 
 - `key` (String)
 
 ##### `includeKeys(keys)` -> `Query`
 
 - `keys` (Array<String>)
+
+##### `selectKeys(keys)` -> `Query`
+
+- `keys` (Array<String>)
+
+##### `orderByAscending(key)` -> `Query`
+
+- `key` (String)
+
+##### `orderByDescending(key)` -> `Query`
+
+- `key` (String)
 
 ##### `findObjectsInBackground(callback)`
 
@@ -195,7 +241,15 @@ Note: If you use predicates, you may constraint your query for additional `where
 
 ##### `removeObjectForKey(key)` 
 
-##### `deleteObject()` 
+##### `deleteObject(callback)` -> Varying 
+
+If a callback function is used, it will be called asynchronous. Otherwise, it returns
+a synchronous boolean indicating if it was completed successfully or not.
+
+##### `saveObject(callback)`  -> Varying
+
+If a callback function is used, it will be called asynchronous. Otherwise, it returns
+a synchronous boolean indicating if it was completed successfully or not.
 
 ## Compile native libraries
 
