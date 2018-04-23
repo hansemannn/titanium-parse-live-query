@@ -34,16 +34,15 @@
 
 #pragma Public APIs
 
-
 - (void)initialize:(id)args
 {
   ENSURE_SINGLE_ARG(args, NSDictionary);
-  
+
   NSString *applicationId = [args objectForKey:@"applicationId"];
   NSString *clientKey = [args objectForKey:@"clientKey"];
   NSString *server = [args objectForKey:@"server"];
   BOOL localDatastoreEnabled = [TiUtils boolValue:@"localDatastoreEnabled" properties:args def:NO];
-  
+
   [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
     configuration.applicationId = applicationId;
     configuration.clientKey = clientKey;
@@ -55,7 +54,7 @@
 - (void)setLogLevel:(id)logLevel
 {
   ENSURE_SINGLE_ARG(logLevel, NSNumber);
-  
+
   [Parse setLogLevel:[TiUtils intValue:logLevel]];
 }
 
@@ -63,24 +62,27 @@
 - (void)saveObject:(id)args
 {
   ENSURE_SINGLE_ARG(args, NSDictionary);
-  
+
   NSString *className = [args objectForKey:@"className"];
   NSDictionary *parameters = [args objectForKey:@"parameters"];
   KrollCallback *callback = [args objectForKey:@"callback"];
 
-  PFObject* poke = [PFObject objectWithClassName:className];
-  
+  PFObject *poke = [PFObject objectWithClassName:className];
+
   for (NSString *key in [parameters allKeys]) {
     poke[key] = [parameters objectForKey:key];
   }
 
-  [poke saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-    if (callback == nil) { return; }
-    
-    [callback call:@[@{
-      @"success": @(succeeded),
-      @"error": error ? error.localizedDescription : [NSNull null]
-    }] thisObject:self];
+  [poke saveInBackgroundWithBlock:^(BOOL succeeded, NSError *_Nullable error) {
+    if (callback == nil) {
+      return;
+    }
+
+    [callback call:@[ @{
+      @"success" : @(succeeded),
+      @"error" : error ? error.localizedDescription : [NSNull null]
+    } ]
+        thisObject:self];
   }];
 }
 

@@ -14,7 +14,7 @@
   if (self = [super _initWithPageContext:context]) {
     _object = object;
   }
-  
+
   return self;
 }
 
@@ -71,7 +71,9 @@
     return @([_object delete]);
   } else {
     [_object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-      [value call:@[@{ @"success": @(succeeded), @"error": error ? error.localizedDescription : [NSNull null] }] thisObject:self];
+      [value call:@[ @{ @"success" : @(succeeded),
+        @"error" : error ? error.localizedDescription : [NSNull null] } ]
+          thisObject:self];
     }];
     return nil;
   }
@@ -85,7 +87,9 @@
     return @([_object save]);
   } else {
     [_object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-      [value call:@[@{ @"success": @(succeeded), @"error": error ? error.localizedDescription : [NSNull null] }] thisObject:self];
+      [value call:@[ @{ @"success" : @(succeeded),
+        @"error" : error ? error.localizedDescription : [NSNull null] } ]
+          thisObject:self];
     }];
     return nil;
   }

@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import <ParseLiveQuery/ParseLiveQuery-Swift.h>
 
-@interface TiLivequeryClientProxy : TiProxy<PFLiveQuerySubscriptionHandling> {
+@interface TiLivequeryClientProxy : TiProxy <PFLiveQuerySubscriptionHandling> {
   PFLiveQueryClient *_client;
 }
 

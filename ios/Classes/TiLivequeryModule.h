@@ -10,7 +10,6 @@
 #import <ParseLiveQuery/ParseLiveQuery-Swift.h>
 
 @interface TiLivequeryModule : TiModule {
-
 }
 
 - (void)initialize:(id)args;

@@ -19,10 +19,10 @@
     NSString *clientKey = [self valueForKey:@"clientKey"];
 
     _client = [[PFLiveQueryClient alloc] initWithServer:server
-                                applicationId:applicationId
-                                    clientKey:clientKey];
+                                          applicationId:applicationId
+                                              clientKey:clientKey];
   }
-  
+
   return _client;
 }
 
@@ -44,7 +44,7 @@
 - (void)subscribeToQuery:(id)query
 {
   ENSURE_SINGLE_ARG(query, TiLivequeryQueryProxy);
-  
+
   [[self client] subscribeToQuery:[(TiLivequeryQueryProxy *)query query] withHandler:self];
 }
 
@@ -60,35 +60,37 @@
 - (void)liveQuery:(PFQuery<PFObject *> *)query didSubscribeInClient:(PFLiveQueryClient *)client
 {
   if ([self _hasListeners:@"subscribe"]) {
-    [self fireEvent:@"subscribe" withObject:@{ @"query": [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query] }];
+    [self fireEvent:@"subscribe" withObject:@{ @"query" : [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query] }];
   }
 }
 
 - (void)liveQuery:(PFQuery<PFObject *> *)query didUnsubscribeInClient:(PFLiveQueryClient *)client
 {
   if ([self _hasListeners:@"unsubscribe"]) {
-    [self fireEvent:@"unsubscribe" withObject:@{ @"query": [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query] }];
+    [self fireEvent:@"unsubscribe" withObject:@{ @"query" : [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query] }];
   }
 }
 
 - (void)liveQuery:(PFQuery<PFObject *> *)query didRecieveEvent:(PFLiveQueryEvent *)event inClient:(PFLiveQueryClient *)client
 {
   if ([self _hasListeners:@"event"]) {
-    [self fireEvent:@"event" withObject:@{
-      @"type": @(event.type),
-      @"object": [[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:event.object],
-      @"query": [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query]
-    }];
+    [self fireEvent:@"event"
+         withObject:@{
+           @"type" : @(event.type),
+           @"object" : [[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:event.object],
+           @"query" : [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query]
+         }];
   }
 }
 
 - (void)liveQuery:(PFQuery<PFObject *> *)query didEncounterError:(NSError *)error inClient:(PFLiveQueryClient *)client
 {
   if ([self _hasListeners:@"error"]) {
-    [self fireEvent:@"error" withObject:@{
-      @"error": error.localizedDescription,
-      @"query": [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query]
-    }];
+    [self fireEvent:@"error"
+         withObject:@{
+           @"error" : error.localizedDescription,
+           @"query" : [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query]
+         }];
   }
 }
 
