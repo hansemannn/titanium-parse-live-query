@@ -16,17 +16,17 @@ var btn2 = Ti.UI.createButton({
 
 btn1.addEventListener('click', function() {
   ParseLiveQuery.initialize({
-    applicationId: '',
-    clientKey: '',
-    server: ''
+    applicationId: 'YOUR_APP_ID',
+    clientKey: 'YOUR_MASTER_KEY',
+    server: 'http://example.com/parse'
   });
 });
 
 btn2.addEventListener('click', function() {
   var client = ParseLiveQuery.createClient({
-    applicationId: '',
-    clientKey: '',
-    server: ''
+    applicationId: 'YOUR_APP_ID',
+    clientKey: 'YOUR_MASTER_KEY',
+    server: 'http://example.com/parse'
   });
 
   client.addEventListener('subscribe', function(e) {
@@ -54,21 +54,10 @@ btn2.addEventListener('click', function() {
   });
 
   var query = ParseLiveQuery.createQuery({
-    className: 'Posts',
-    predicate: 'name = "Hans"'
-  });
+    className: 'Users'
+  }).whereKeyContainsAllObjectsInArray('users', ['userId1', 'userId2']])
 
   client.subscribeToQuery(query);
-
-  // Get existing objects
-  query.findObjectsInBackground(function(e) {
-    Ti.API.info(e);
-    var objects = e.objects;
-
-    for (var i = 0; i < objects.length; i++) {
-      printObject(objects[i]);
-    }
-  })
 });
 
 // Utility method to print objects by using "objectForKey"
