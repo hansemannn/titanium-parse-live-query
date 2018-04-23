@@ -138,7 +138,32 @@ var query = LiveQuery.createQuery({
 });
 ```
 
+Note: If you use predicates, you may constraint your query for additional `where` clauses.
+
 #### Methods
+
+##### `whereKeyContainedIn(key, array)` -> `Query`
+
+- `key` (String)
+- `array` (Array<Any>)
+
+##### `whereKeyContainsAllObjectsInArray(key, array)` -> `Query`
+
+- `key` (String)
+- `array` (Array<Any>)
+
+##### `whereKeyEqualTo(key, object)` -> `Query`
+
+- `key` (String)
+- `object` (Any)
+
+##### `whereKeyExists(key)` -> `Query`
+
+- `key` (String)
+
+##### `includeKeys(keys)` -> `Query`
+
+- `keys` (Array<String>)
 
 ##### `findObjectsInBackground(callback)`
 

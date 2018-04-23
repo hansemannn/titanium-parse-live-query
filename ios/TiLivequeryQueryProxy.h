@@ -12,10 +12,28 @@
   PFQuery *_query;
 }
 
+#pragma mark Private API's
+
 - (id)_initWithPageContext:(id<TiEvaluator>)context andQuery:(PFQuery *)query;
 
+- (id)_initWithPageContext:(id<TiEvaluator>)context args:(NSArray *)args;
+
 - (PFQuery *)query;
+  
+#pragma mark Public API's
+  
+- (TiLivequeryQueryProxy *)whereKeyContainedIn:(id)args;
+
+- (TiLivequeryQueryProxy *)whereKeyContainsAllObjectsInArray:(id)args;
+
+- (TiLivequeryQueryProxy *)whereKeyEqualTo:(id)args;
+
+- (TiLivequeryQueryProxy *)includeKeys:(id)args;
+  
+- (TiLivequeryQueryProxy *)whereKeyExists:(id)args;
 
 - (void)clearCachedResult:(id)unused;
+
+- (void)findObjectsInBackground:(id)callback;
 
 @end

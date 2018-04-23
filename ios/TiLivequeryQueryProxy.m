@@ -10,6 +10,8 @@
 
 @implementation TiLivequeryQueryProxy
 
+#pragma mark Private API's
+
 - (id)_initWithPageContext:(id<TiEvaluator>)context andQuery:(PFQuery *)query
 {
   if (self = [super _initWithPageContext:context]) {
@@ -25,11 +27,13 @@
     NSDictionary *params = [args objectAtIndex:0];
     NSString *className = [params objectForKey:@"className"];
     NSString *predicate = [params objectForKey:@"predicate"];
-    NSString *predicateArguments = [params objectForKey:@"predicateArguments"];
-
-    NSString *predicateFormat = [NSString stringWithFormat:predicate, predicateArguments];
+    id predicateArguments = [params objectForKey:@"predicateArguments"];
     
-    _query = [PFQuery queryWithClassName:className predicate:predicate ? [NSPredicate predicateWithFormat:predicateFormat] : nil];
+    if (predicate == nil) {
+      _query = [PFQuery queryWithClassName:className];
+    } else {
+      _query = [PFQuery queryWithClassName:className predicate:[NSPredicate predicateWithFormat:predicate, predicateArguments]];
+    }
   }
   
   return self;
@@ -39,8 +43,56 @@
 {
   return _query;
 }
-
+  
 #pragma mark Public API's
+  
+- (TiLivequeryQueryProxy *)whereKeyContainedIn:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  NSArray *containedIn = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key containedIn:containedIn];
+  
+  return self;
+}
+  
+- (TiLivequeryQueryProxy *)whereKeyContainsAllObjectsInArray:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  NSArray *containedIn = [args objectAtIndex:1];
+  
+  _query = [[self query] whereKey:key containsAllObjectsInArray:containedIn];
+  
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)whereKeyEqualTo:(id)args
+  {
+    NSString *key = [args objectAtIndex:0];
+    id equalTo = [args objectAtIndex:1];
+    
+    _query = [[self query] whereKey:key equalTo:equalTo];
+    
+    return self;
+  }
+
+  - (TiLivequeryQueryProxy *)includeKeys:(id)args
+  {
+    NSArray *keys = [args objectAtIndex:0];
+    
+    _query = [[self query] includeKeys:keys];
+    
+    return self;
+  }
+
+- (TiLivequeryQueryProxy *)whereKeyExists:(id)args
+{
+  NSString *key = [args objectAtIndex:0];
+  
+  _query = [[self query] whereKeyExists:key];
+  
+  return self;
+}
 
 - (void)clearCachedResult:(id)unused
 {
