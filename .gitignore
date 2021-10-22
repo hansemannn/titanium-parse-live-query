@@ -17,3 +17,5 @@ ios/titanium-identity.xcodeproj/project.xcworkspace/*
 native-project/test.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/*
 *.xcuserstate
 titanium-parse-live-query.xcodeproj/project.xcworkspace/xcuserdata/*
+/ios/Pods
+/ios/dist

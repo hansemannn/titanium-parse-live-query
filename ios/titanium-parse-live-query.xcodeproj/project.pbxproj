@@ -27,7 +27,6 @@
 		24DE9E1111C5FE74003F90F6 /* TiLivequeryModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* TiLivequeryModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* TiLivequeryModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */; };
-		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		DB127EDF207CC02100D41D9A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB127EDA207CC02100D41D9A /* Bolts.framework */; };
 		DB127EE0207CC02100D41D9A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB127EDB207CC02100D41D9A /* Parse.framework */; };
 		DB127EE1207CC02100D41D9A /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB127EDC207CC02100D41D9A /* BoltsSwift.framework */; };
@@ -58,7 +57,6 @@
 		24DE9E0F11C5FE74003F90F6 /* TiLivequeryModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryModuleAssets.h; path = Classes/TiLivequeryModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryModuleAssets.m; path = Classes/TiLivequeryModuleAssets.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLivequery_Prefix.pch; sourceTree = SOURCE_ROOT; };
-		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libti.livequery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.livequery.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB127EDA207CC02100D41D9A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = platform/Bolts.framework; sourceTree = "<group>"; };
 		DB127EDB207CC02100D41D9A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = platform/Parse.framework; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				DB127EE1207CC02100D41D9A /* BoltsSwift.framework in Frameworks */,
 				DB127EE2207CC02100D41D9A /* ParseLiveQuery.framework in Frameworks */,
 				DB127EE3207CC02100D41D9A /* Starscream.framework in Frameworks */,
-				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +114,6 @@
 				DB127EDB207CC02100D41D9A /* Parse.framework */,
 				DB127EDD207CC02100D41D9A /* ParseLiveQuery.framework */,
 				DB127EDE207CC02100D41D9A /* Starscream.framework */,
-				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

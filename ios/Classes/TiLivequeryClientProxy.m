@@ -38,7 +38,8 @@
 
 - (NSNumber *)isConnected:(id)unused
 {
-  return @([[self client] userDisconnected] == NO);
+  DEPRECATED_REMOVED(@"ParseLiveQuery.isConnected", @"2.0.0", @"2.0.0 (removed by Parse)");
+  return @(NO);
 }
 
 - (void)subscribeToQuery:(id)query

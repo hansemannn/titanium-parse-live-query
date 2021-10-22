@@ -1,0 +1,7 @@
+plugin 'cocoapods-binary'
+use_frameworks!  
+
+target 'titanium-parse-live-query' do
+    pod 'ParseLiveQuery', :binary => true
+end
+  
