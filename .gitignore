@@ -19,3 +19,4 @@ native-project/test.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/*
 titanium-parse-live-query.xcodeproj/project.xcworkspace/xcuserdata/*
 /ios/Pods
 /ios/dist
+/ios/Carthage
