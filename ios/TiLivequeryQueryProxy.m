@@ -236,7 +236,7 @@
   }];
 }
 
-- (void)getObjectInBackgroundWithId:(id)objectId
+- (void)objectInBackgroundWithId:(id)objectId
 {
   ENSURE_SINGLE_ARG(objectId, NSString);
   [_query getObjectInBackgroundWithId:objectId];

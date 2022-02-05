@@ -48,12 +48,15 @@
   return [_object objectForKey:key];
 }
 
-- (void)setObjectForKey:(id)args
+- (void)add:(id)args
 {
-  id object = [args objectAtIndex:0];
-  id key = [args objectAtIndex:1];
+  id key = [args objectAtIndex:0];
+  id value = [args objectAtIndex:1];
 
-  return [_object setObject:object forKey:key];
+  NSLog(@"[WARN] key = %@", key);
+  NSLog(@"[WARN] value = %@", value);
+
+  return [_object setObject:value forKey:key];
 }
 
 - (void)removeObjectForKey:(id)key

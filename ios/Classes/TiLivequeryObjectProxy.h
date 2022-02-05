@@ -25,7 +25,7 @@
 
 - (id)objectForKey:(id)key;
 
-- (void)setObjectForKey:(id)args;
+- (void)add:(id)args;
 
 - (void)removeObjectForKey:(id)key;
 

@@ -61,6 +61,6 @@
 
 - (void)findObjectsInBackground:(id)callback;
 
-- (void)getObjectInBackgroundWithId:(id)objectId;
+- (void)objectInBackgroundWithId:(id)objectId;
 
 @end
