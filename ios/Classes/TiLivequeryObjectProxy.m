@@ -67,7 +67,7 @@
 
 - (NSNumber *)deleteObject:(id)value
 {
-  ENSURE_TYPE_OR_NIL(value, KrollCallback);
+  ENSURE_SINGLE_ARG_OR_NIL(value, KrollCallback);
 
   if (value == nil) {
     return @([_object delete]);
@@ -83,7 +83,7 @@
 
 - (NSNumber *)saveObject:(id)callback
 {
-  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+  ENSURE_SINGLE_ARG_OR_NIL(callback, KrollCallback);
 
   if (callback == nil) {
     return @([_object save]);
@@ -99,7 +99,7 @@
 
 - (void)fetchInBackground:(id)callback
 {
-  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+  ENSURE_SINGLE_ARG_OR_NIL(callback, KrollCallback);
 
   if (callback == nil) {
     [_object fetchInBackground];
@@ -116,7 +116,7 @@
 
 - (void)pinInBackground:(id)callback
 {
-  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+  ENSURE_SINGLE_ARG_OR_NIL(callback, KrollCallback);
 
   if (callback == nil) {
     [_object pinInBackground];
@@ -132,7 +132,7 @@
 
 - (void)unpinInBackground:(id)callback
 {
-  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+  ENSURE_SINGLE_ARG_OR_NIL(callback, KrollCallback);
 
   if (callback == nil) {
     [_object unpinInBackground];
@@ -148,7 +148,7 @@
 
 - (void)fetchFromLocalDatastoreInBackground:(id)callback
 {
-  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+  ENSURE_SINGLE_ARG_OR_NIL(callback, KrollCallback);
 
   if (callback == nil) {
     [_object fetchFromLocalDatastoreInBackground];
@@ -164,7 +164,7 @@
 }
 - (void)saveEventually:(id)callback
 {
-  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+  ENSURE_SINGLE_ARG_OR_NIL(callback, KrollCallback);
 
   if (callback == nil) {
     [_object saveEventually];
