@@ -13,6 +13,8 @@
 
 - (void)initialize:(id)args;
 
+- (NSNumber *)isInitialized:(id)unused;
+
 - (void)setLogLevel:(id)logLevel;
 
 - (void)saveObject:(id)args;

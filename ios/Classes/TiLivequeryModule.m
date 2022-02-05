@@ -24,14 +24,6 @@
   return @"ti.livequery";
 }
 
-#pragma mark Lifecycle
-
-- (void)startup
-{
-  [super startup];
-  DebugLog(@"[DEBUG] %@ loaded", self);
-}
-
 #pragma Public APIs
 
 - (void)initialize:(id)args
@@ -49,6 +41,11 @@
     configuration.server = server;
     configuration.localDatastoreEnabled = localDatastoreEnabled;
   }]];
+}
+
+- (NSNumber *)isInitialized:(id)unused
+{
+  return @([Parse currentConfiguration] != nil);
 }
 
 - (void)setLogLevel:(id)logLevel
