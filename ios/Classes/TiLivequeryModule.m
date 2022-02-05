@@ -8,7 +8,6 @@
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
-#import "TiLivequeryObjectProxy.h"
 
 @implementation TiLivequeryModule
 
@@ -43,7 +42,7 @@
   }]];
 }
 
-- (NSNumber *)isInitialized:(id)unused
+- (id)isInitialized:(id)unused
 {
   return @([Parse currentConfiguration] != nil);
 }

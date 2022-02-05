@@ -190,6 +190,13 @@
   return self;
 }
 
+- (TiLivequeryQueryProxy *)fromLocalDatastore:(id)unused
+{
+  _query = [[self query] fromLocalDatastore];
+
+  return self;
+}
+
 - (void)clearCachedResult:(id)unused
 {
   [_query clearCachedResult];

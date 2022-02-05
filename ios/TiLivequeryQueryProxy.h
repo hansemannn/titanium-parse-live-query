@@ -51,6 +51,8 @@
 
 - (TiLivequeryQueryProxy *)orderByDescending:(id)key;
 
+- (TiLivequeryQueryProxy *)fromLocalDatastore:(id)unused;
+
 - (void)clearCachedResult:(id)unused;
 
 - (void)setLimit:(id)limit;
