@@ -11,7 +11,7 @@ to expose new features, e.g. query subscriptions.
 
 ## Requirements
 
-- [x] iOS: Swift 4.1+ (embedded into the hook in `hooks/`), iOS 8+
+- [x] iOS: Swift 5+ (embedded into the hook in `hooks/`), iOS 9.2.0+
 - [x] Android: Gradle, Android 4.1+
 - [x] Titanium SDK 6.3.0+ (7.0.0+ for Android)
 
@@ -60,13 +60,15 @@ Add the following to the `<android>` manifest section of the tiapp.xml:
 - `clientKey` (String)
 - `server` (String)
 
-#####  `saveObject(args)`
+##### `saveObject(args)`
 
 - `className` (String)
 - `parameters` (Dictionary)
 - `callback` (Function)
 
 ##### `clearAllCachedResults()`
+
+##### `objectWithClassName(className)` **iOS only**
 
 #### Constants **iOS only**
 
@@ -215,6 +217,8 @@ Note: If you use predicates, you may constraint your query for additional `where
 
 - `callback` (Function)
 
+##### `getObjectInBackgroundWithId(objectId)`
+
 ##### `clearCachedResult()`
 
 ---
@@ -246,10 +250,32 @@ Note: If you use predicates, you may constraint your query for additional `where
 If a callback function is used, it will be called asynchronous. Otherwise, it returns
 a synchronous boolean indicating if it was completed successfully or not.
 
-##### `saveObject(callback)`  -> Varying
+##### `saveObject(callback)` -> Varying
 
 If a callback function is used, it will be called asynchronous. Otherwise, it returns
 a synchronous boolean indicating if it was completed successfully or not.
+
+##### `fetchInBackground(callback)`
+
+The callback is optional.
+
+##### `pinInBackground(callback)`
+
+The callback is optional.
+
+##### `unpinInBackground(callback)`
+
+The callback is optional.
+
+##### `fetchFromLocalDatastoreInBackground(callback)`
+
+The callback is optional.
+
+##### `saveEventually(callback)`
+
+The callback is optional.
+
+##### `deleteEventually()`
 
 ## Compile native libraries
 

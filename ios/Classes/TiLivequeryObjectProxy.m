@@ -1,6 +1,5 @@
 /**
- * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2018 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2021-present by Hans Knöchel
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
@@ -79,20 +78,107 @@
   }
 }
 
-- (NSNumber *)saveObject:(id)value
+- (NSNumber *)saveObject:(id)callback
 {
-  ENSURE_TYPE_OR_NIL(value, KrollCallback);
+  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
 
-  if (value == nil) {
+  if (callback == nil) {
     return @([_object save]);
   } else {
     [_object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-      [value call:@[ @{ @"success" : @(succeeded),
+      [callback call:@[ @{ @"success" : @(succeeded),
         @"error" : error ? error.localizedDescription : [NSNull null] } ]
           thisObject:self];
     }];
     return nil;
   }
 }
+
+- (void)fetchInBackground:(id)callback
+{
+  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+
+  if (callback == nil) {
+    [_object fetchInBackground];
+  } else {
+    [_object fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+      [callback call:@[ @{
+        @"success" : @(error == nil),
+        @"error" : error ? error.localizedDescription : [NSNull null],
+        @"object": [[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:object]
+      } ] thisObject:self];
+    }];
+  }
+}
+
+- (void)pinInBackground:(id)callback
+{
+  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+
+  if (callback == nil) {
+    [_object pinInBackground];
+  } else {
+    [_object pinInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+      [callback call:@[ @{
+        @"success" : @(error == nil),
+        @"error" : error ? error.localizedDescription : [NSNull null]
+      } ] thisObject:self];
+    }];
+  }
+}
+
+- (void)unpinInBackground:(id)callback
+{
+  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+
+  if (callback == nil) {
+    [_object unpinInBackground];
+  } else {
+    [_object unpinInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+      [callback call:@[ @{
+        @"success" : @(error == nil),
+        @"error" : error ? error.localizedDescription : [NSNull null]
+      } ] thisObject:self];
+    }];
+  }
+}
+
+- (void)fetchFromLocalDatastoreInBackground:(id)callback
+{
+  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+
+  if (callback == nil) {
+    [_object fetchFromLocalDatastoreInBackground];
+  } else {
+    [_object fetchFromLocalDatastoreInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+      [callback call:@[ @{
+        @"success" : @(error == nil),
+        @"error" : error ? error.localizedDescription : [NSNull null],
+        @"object": [[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:object]
+      } ] thisObject:self];
+    }];
+  }
+}
+- (void)saveEventually:(id)callback
+{
+  ENSURE_TYPE_OR_NIL(callback, KrollCallback);
+
+  if (callback == nil) {
+    [_object saveEventually];
+  } else {
+    [_object saveEventually:^(BOOL succeeded, NSError * _Nullable error) {
+      [callback call:@[ @{
+        @"success" : @(error == nil),
+        @"error" : error ? error.localizedDescription : [NSNull null]
+      } ] thisObject:self];
+    }];
+  }
+}
+
+- (void)deleteEventually:(id)unused
+{
+  [_object deleteEventually];
+}
+
 
 @end

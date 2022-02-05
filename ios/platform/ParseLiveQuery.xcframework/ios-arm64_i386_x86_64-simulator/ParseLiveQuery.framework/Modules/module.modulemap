@@ -1,0 +1,4 @@
+framework module ParseLiveQuery {
+  header "ParseLiveQuery-Swift.h"
+  requires objc
+}

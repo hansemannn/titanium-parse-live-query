@@ -1,6 +1,5 @@
 /**
- * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2018 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2021-present by Hans Knöchel
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
@@ -9,6 +8,7 @@
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
+#import "TiLivequeryObjectProxy.h"
 
 @implementation TiLivequeryModule
 
@@ -89,6 +89,14 @@
 - (void)clearAllCachedResults:(id)unused
 {
   [PFQuery clearAllCachedResults];
+}
+
+- (TiLivequeryObjectProxy *)objectWithClassName:(id)name
+{
+  ENSURE_SINGLE_ARG(name, NSString);
+  PFObject *object = [PFObject objectWithClassName:name];
+
+  return [[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:object];
 }
 
 MAKE_SYSTEM_PROP(EVENT_TYPE_ENTERED, PFLiveQueryEventTypeEntered);

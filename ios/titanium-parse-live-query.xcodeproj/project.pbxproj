@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -26,12 +26,12 @@
 		24DD6CFA1134B3F500162E58 /* TiLivequeryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* TiLivequeryModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* TiLivequeryModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* TiLivequeryModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* TiLivequeryModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */; };
+		3AEB58A527ADC39F00981980 /* Bolts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEB58A027ADC39F00981980 /* Bolts.xcframework */; };
+		3AEB58A627ADC39F00981980 /* ParseLiveQuery.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEB58A127ADC39F00981980 /* ParseLiveQuery.xcframework */; };
+		3AEB58A727ADC39F00981980 /* ParseUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEB58A227ADC39F00981980 /* ParseUI.xcframework */; };
+		3AEB58A827ADC39F00981980 /* Parse.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEB58A327ADC39F00981980 /* Parse.xcframework */; };
+		3AEB58A927ADC39F00981980 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEB58A427ADC39F00981980 /* Starscream.xcframework */; };
 		AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */; };
-		DB127EDF207CC02100D41D9A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB127EDA207CC02100D41D9A /* Bolts.framework */; };
-		DB127EE0207CC02100D41D9A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB127EDB207CC02100D41D9A /* Parse.framework */; };
-		DB127EE1207CC02100D41D9A /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB127EDC207CC02100D41D9A /* BoltsSwift.framework */; };
-		DB127EE2207CC02100D41D9A /* ParseLiveQuery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB127EDD207CC02100D41D9A /* ParseLiveQuery.framework */; };
-		DB127EE3207CC02100D41D9A /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB127EDE207CC02100D41D9A /* Starscream.framework */; };
 		DB127EE6207CC34B00D41D9A /* TiLivequeryClientProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */; };
 		DB127EE7207CC34B00D41D9A /* TiLivequeryClientProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */; };
 		DB9F1F042080CC2C002C2AA1 /* TiLivequeryQueryProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9F1F022080CC2C002C2AA1 /* TiLivequeryQueryProxy.h */; };
@@ -56,13 +56,13 @@
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
 		24DE9E0F11C5FE74003F90F6 /* TiLivequeryModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryModuleAssets.h; path = Classes/TiLivequeryModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryModuleAssets.m; path = Classes/TiLivequeryModuleAssets.m; sourceTree = "<group>"; };
+		3AEB58A027ADC39F00981980 /* Bolts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Bolts.xcframework; path = platform/Bolts.xcframework; sourceTree = "<group>"; };
+		3AEB58A127ADC39F00981980 /* ParseLiveQuery.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ParseLiveQuery.xcframework; path = platform/ParseLiveQuery.xcframework; sourceTree = "<group>"; };
+		3AEB58A227ADC39F00981980 /* ParseUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ParseUI.xcframework; path = platform/ParseUI.xcframework; sourceTree = "<group>"; };
+		3AEB58A327ADC39F00981980 /* Parse.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Parse.xcframework; path = platform/Parse.xcframework; sourceTree = "<group>"; };
+		3AEB58A427ADC39F00981980 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = platform/Starscream.xcframework; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLivequery_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libti.livequery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.livequery.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB127EDA207CC02100D41D9A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = platform/Bolts.framework; sourceTree = "<group>"; };
-		DB127EDB207CC02100D41D9A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = platform/Parse.framework; sourceTree = "<group>"; };
-		DB127EDC207CC02100D41D9A /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoltsSwift.framework; path = platform/BoltsSwift.framework; sourceTree = "<group>"; };
-		DB127EDD207CC02100D41D9A /* ParseLiveQuery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseLiveQuery.framework; path = platform/ParseLiveQuery.framework; sourceTree = "<group>"; };
-		DB127EDE207CC02100D41D9A /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = platform/Starscream.framework; sourceTree = "<group>"; };
 		DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryClientProxy.h; path = Classes/TiLivequeryClientProxy.h; sourceTree = "<group>"; };
 		DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryClientProxy.m; path = Classes/TiLivequeryClientProxy.m; sourceTree = "<group>"; };
 		DB9F1F022080CC2C002C2AA1 /* TiLivequeryQueryProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TiLivequeryQueryProxy.h; sourceTree = "<group>"; };
@@ -76,11 +76,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB127EDF207CC02100D41D9A /* Bolts.framework in Frameworks */,
-				DB127EE0207CC02100D41D9A /* Parse.framework in Frameworks */,
-				DB127EE1207CC02100D41D9A /* BoltsSwift.framework in Frameworks */,
-				DB127EE2207CC02100D41D9A /* ParseLiveQuery.framework in Frameworks */,
-				DB127EE3207CC02100D41D9A /* Starscream.framework in Frameworks */,
+				3AEB58A627ADC39F00981980 /* ParseLiveQuery.xcframework in Frameworks */,
+				3AEB58A727ADC39F00981980 /* ParseUI.xcframework in Frameworks */,
+				3AEB58A527ADC39F00981980 /* Bolts.xcframework in Frameworks */,
+				3AEB58A827ADC39F00981980 /* Parse.xcframework in Frameworks */,
+				3AEB58A927ADC39F00981980 /* Starscream.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,11 +109,11 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB127EDA207CC02100D41D9A /* Bolts.framework */,
-				DB127EDC207CC02100D41D9A /* BoltsSwift.framework */,
-				DB127EDB207CC02100D41D9A /* Parse.framework */,
-				DB127EDD207CC02100D41D9A /* ParseLiveQuery.framework */,
-				DB127EDE207CC02100D41D9A /* Starscream.framework */,
+				3AEB58A027ADC39F00981980 /* Bolts.xcframework */,
+				3AEB58A327ADC39F00981980 /* Parse.xcframework */,
+				3AEB58A127ADC39F00981980 /* ParseLiveQuery.xcframework */,
+				3AEB58A227ADC39F00981980 /* ParseUI.xcframework */,
+				3AEB58A427ADC39F00981980 /* Starscream.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

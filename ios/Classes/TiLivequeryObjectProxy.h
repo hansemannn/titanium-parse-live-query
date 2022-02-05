@@ -1,6 +1,5 @@
 /**
- * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2018 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2021-present by Hans Knöchel
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
@@ -33,5 +32,17 @@
 - (NSNumber *)deleteObject:(id)unused;
 
 - (NSNumber *)saveObject:(id)unused;
+
+- (void)fetchInBackground:(id)callback;
+
+- (void)pinInBackground:(id)callback;
+
+- (void)unpinInBackground:(id)callback;
+
+- (void)fetchFromLocalDatastoreInBackground:(id)callback;
+
+- (void)saveEventually:(id)callback;
+
+- (void)deleteEventually:(id)unused;
 
 @end
