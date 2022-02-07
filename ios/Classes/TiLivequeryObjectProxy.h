@@ -27,11 +27,13 @@
 
 - (void)add:(id)args;
 
-- (void)removeObjectForKey:(id)key;
+- (void)remove:(id)key;
 
 - (NSNumber *)deleteObject:(id)unused;
 
 - (NSNumber *)saveObject:(id)unused;
+
+- (void)saveInBackground:(id)unused;
 
 - (void)fetchInBackground:(id)callback;
 
@@ -40,6 +42,8 @@
 - (void)unpinInBackground:(id)callback;
 
 - (void)fetchFromLocalDatastoreInBackground:(id)callback;
+
+- (void)fetchIfNeededInBackgroundWithBlock:(id)callback;
 
 - (void)saveEventually:(id)callback;
 

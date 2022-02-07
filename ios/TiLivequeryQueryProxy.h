@@ -53,6 +53,18 @@
 
 - (TiLivequeryQueryProxy *)fromLocalDatastore:(id)unused;
 
+- (TiLivequeryQueryProxy *)fromPin:(id)unused;
+
+- (TiLivequeryQueryProxy *)nearGeoPoint:(id)args;
+
+- (TiLivequeryQueryProxy *)nearGeoPointWithinKilometers:(id)args;
+
+- (TiLivequeryQueryProxy *)nearGeoPointWithinMiles:(id)args;
+
+- (TiLivequeryQueryProxy *)nearGeoPointWithinRadians:(id)args;
+
+- (TiLivequeryQueryProxy *)withinPolygon:(id)args;
+
 - (void)clearCachedResult:(id)unused;
 
 - (void)setLimit:(id)limit;

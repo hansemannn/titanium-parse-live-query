@@ -53,13 +53,10 @@
   id key = [args objectAtIndex:0];
   id value = [args objectAtIndex:1];
 
-  NSLog(@"[WARN] key = %@", key);
-  NSLog(@"[WARN] value = %@", value);
-
   return [_object setObject:value forKey:key];
 }
 
-- (void)removeObjectForKey:(id)key
+- (void)remove:(id)key
 {
   ENSURE_SINGLE_ARG(key, NSObject);
   return [_object removeObjectForKey:key];
@@ -95,6 +92,11 @@
     }];
     return nil;
   }
+}
+
+- (void)saveInBackground:(id)unused
+{
+  [_object saveInBackground];  
 }
 
 - (void)fetchInBackground:(id)callback
@@ -162,6 +164,20 @@
     }];
   }
 }
+
+- (void)fetchIfNeededInBackgroundWithBlock:(id)callback
+{
+  ENSURE_SINGLE_ARG(callback, KrollCallback);
+
+  [_object fetchIfNeededInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+    [callback call:@[ @{
+      @"success" : @(error == nil),
+      @"error" : error ? error.localizedDescription : [NSNull null],
+      @"object": [[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:object]
+    } ] thisObject:self];
+  }];
+}
+
 - (void)saveEventually:(id)callback
 {
   ENSURE_SINGLE_ARG_OR_NIL(callback, KrollCallback);

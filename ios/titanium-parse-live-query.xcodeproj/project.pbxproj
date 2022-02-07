@@ -31,6 +31,10 @@
 		3A2B7EA627AE999F004B9D3B /* ParseLiveQuery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B7EA127AE999F004B9D3B /* ParseLiveQuery.framework */; };
 		3A2B7EA727AE999F004B9D3B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B7EA227AE999F004B9D3B /* Parse.framework */; };
 		3A2B7EA827AE999F004B9D3B /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B7EA327AE999F004B9D3B /* Starscream.framework */; };
+		3A439CD427B1C59000E027D6 /* TiLivequeryGeoPointProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A439CD227B1C59000E027D6 /* TiLivequeryGeoPointProxy.m */; };
+		3A439CD527B1C59000E027D6 /* TiLivequeryGeoPointProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */; };
+		3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */; };
+		3A55C2EA27B1C8950004691A /* TiLivequeryPolygonProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */; };
 		AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */; };
 		DB127EE6207CC34B00D41D9A /* TiLivequeryClientProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */; };
 		DB127EE7207CC34B00D41D9A /* TiLivequeryClientProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */; };
@@ -61,6 +65,10 @@
 		3A2B7EA127AE999F004B9D3B /* ParseLiveQuery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseLiveQuery.framework; path = platform/ParseLiveQuery.framework; sourceTree = "<group>"; };
 		3A2B7EA227AE999F004B9D3B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = platform/Parse.framework; sourceTree = "<group>"; };
 		3A2B7EA327AE999F004B9D3B /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = platform/Starscream.framework; sourceTree = "<group>"; };
+		3A439CD227B1C59000E027D6 /* TiLivequeryGeoPointProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryGeoPointProxy.m; path = Classes/TiLivequeryGeoPointProxy.m; sourceTree = "<group>"; };
+		3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryGeoPointProxy.h; path = Classes/TiLivequeryGeoPointProxy.h; sourceTree = "<group>"; };
+		3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryPolygonProxy.m; path = Classes/TiLivequeryPolygonProxy.m; sourceTree = "<group>"; };
+		3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryPolygonProxy.h; path = Classes/TiLivequeryPolygonProxy.h; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLivequery_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libti.livequery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.livequery.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryClientProxy.h; path = Classes/TiLivequeryClientProxy.h; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				DBC8A09A208E0B34007EAC38 /* Module */,
+				3A439CD127B1C57000E027D6 /* Polygon */,
+				3A439CD027B1C55F00E027D6 /* GeoPoint */,
 				DBC8A099208E0B2D007EAC38 /* Query */,
 				DBC8A098208E0B29007EAC38 /* Client */,
 				DBC8A097208E0B23007EAC38 /* Object */,
@@ -138,6 +148,24 @@
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		3A439CD027B1C55F00E027D6 /* GeoPoint */ = {
+			isa = PBXGroup;
+			children = (
+				3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */,
+				3A439CD227B1C59000E027D6 /* TiLivequeryGeoPointProxy.m */,
+			);
+			name = GeoPoint;
+			sourceTree = "<group>";
+		};
+		3A439CD127B1C57000E027D6 /* Polygon */ = {
+			isa = PBXGroup;
+			children = (
+				3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */,
+				3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */,
+			);
+			name = Polygon;
 			sourceTree = "<group>";
 		};
 		DBC8A097208E0B23007EAC38 /* Object */ = {
@@ -184,7 +212,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9F1F042080CC2C002C2AA1 /* TiLivequeryQueryProxy.h in Headers */,
+				3A55C2EA27B1C8950004691A /* TiLivequeryPolygonProxy.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */,
+				3A439CD527B1C59000E027D6 /* TiLivequeryGeoPointProxy.h in Headers */,
 				24DD6CF91134B3F500162E58 /* TiLivequeryModule.h in Headers */,
 				DBBA692620809E3700F8B67B /* TiLivequeryObjectProxy.h in Headers */,
 				DB127EE6207CC34B00D41D9A /* TiLivequeryClientProxy.h in Headers */,
@@ -263,7 +293,9 @@
 				DB127EE7207CC34B00D41D9A /* TiLivequeryClientProxy.m in Sources */,
 				24DD6CFA1134B3F500162E58 /* TiLivequeryModule.m in Sources */,
 				DB9F1F052080CC2C002C2AA1 /* TiLivequeryQueryProxy.m in Sources */,
+				3A439CD427B1C59000E027D6 /* TiLivequeryGeoPointProxy.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* TiLivequeryModuleAssets.m in Sources */,
+				3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */,
 				DBBA692720809E3700F8B67B /* TiLivequeryObjectProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

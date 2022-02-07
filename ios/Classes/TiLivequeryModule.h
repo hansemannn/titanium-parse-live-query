@@ -7,7 +7,10 @@
 #import "TiModule.h"
 #import <Parse/Parse.h>
 #import <ParseLiveQuery/ParseLiveQuery-Swift.h>
+
 #import "TiLivequeryObjectProxy.h"
+#import "TiLivequeryGeoPointProxy.h"
+#import "TiLivequeryPolygonProxy.h"
 
 @interface TiLivequeryModule : TiModule {
 }
@@ -23,5 +26,11 @@
 - (void)clearAllCachedResults:(id)unused;
 
 - (TiLivequeryObjectProxy *)objectWithClassName:(id)name;
+
+- (TiLivequeryGeoPointProxy *)geoPointFromLocation:(id)location;
+
+- (void)geoPointForCurrentLocationInBackground:(id)callback;
+
+- (TiLivequeryPolygonProxy *)polygonFromCoordinates:(id)coordinates;
 
 @end

@@ -6,6 +6,8 @@
 
 #import "TiLivequeryQueryProxy.h"
 #import "TiLivequeryObjectProxy.h"
+#import "TiLivequeryGeoPointProxy.h"
+#import "TiLivequeryPolygonProxy.h"
 #import "TiUtils.h"
 
 @implementation TiLivequeryQueryProxy
@@ -193,6 +195,66 @@
 - (TiLivequeryQueryProxy *)fromLocalDatastore:(id)unused
 {
   _query = [[self query] fromLocalDatastore];
+
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)fromPin:(id)unused
+{
+  _query = [_query fromPin];
+
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)nearGeoPoint:(id)args
+{
+  NSString *key = [TiUtils stringValue:[args objectAtIndex:0]];
+  TiLivequeryGeoPointProxy *geoPoint = (TiLivequeryGeoPointProxy *)[args objectAtIndex:1];
+
+  _query = [_query whereKey:key nearGeoPoint:geoPoint.geoPoint];
+
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)nearGeoPointWithinKilometers:(id)args
+{
+  NSString *key = [TiUtils stringValue:[args objectAtIndex:0]];
+  TiLivequeryGeoPointProxy *geoPoint = (TiLivequeryGeoPointProxy *)[args objectAtIndex:1];
+  double kilometers = [TiUtils doubleValue:[args objectAtIndex:2]];
+
+  _query = [_query whereKey:key nearGeoPoint:geoPoint.geoPoint withinKilometers:kilometers];
+
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)nearGeoPointWithinMiles:(id)args
+{
+  NSString *key = [TiUtils stringValue:[args objectAtIndex:0]];
+  TiLivequeryGeoPointProxy *geoPoint = (TiLivequeryGeoPointProxy *)[args objectAtIndex:1];
+  double miles = [TiUtils doubleValue:[args objectAtIndex:2]];
+
+  _query = [_query whereKey:key nearGeoPoint:geoPoint.geoPoint withinMiles:miles];
+
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)nearGeoPointWithinRadians:(id)args
+{
+  NSString *key = [TiUtils stringValue:[args objectAtIndex:0]];
+  TiLivequeryGeoPointProxy *geoPoint = (TiLivequeryGeoPointProxy *)[args objectAtIndex:1];
+  double radians = [TiUtils doubleValue:[args objectAtIndex:2]];
+
+  _query = [_query whereKey:key nearGeoPoint:geoPoint.geoPoint withinRadians:radians];
+
+  return self;
+}
+
+- (TiLivequeryQueryProxy *)withinPolygon:(id)args
+{
+  NSString *key = [TiUtils stringValue:[args objectAtIndex:0]];
+  TiLivequeryPolygonProxy *polygon = (TiLivequeryPolygonProxy *)[args objectAtIndex:1];
+
+  _query = [_query whereKey:key withinPolygon:polygon.polygon.coordinates];
 
   return self;
 }

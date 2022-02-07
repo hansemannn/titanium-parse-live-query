@@ -95,6 +95,51 @@
   return [[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:object];
 }
 
+- (TiLivequeryGeoPointProxy *)geoPointFromLocation:(id)location
+{
+  ENSURE_SINGLE_ARG(location, NSDictionary);
+
+  CLLocationDegrees latitude = [TiUtils doubleValue:@"latitude" properties:location];
+  CLLocationDegrees longitude = [TiUtils doubleValue:@"longitude" properties:location];
+
+  PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:latitude longitude:longitude];
+
+  return [[TiLivequeryGeoPointProxy alloc] _initWithPageContext:self.pageContext andGeoPoint:geoPoint];
+}
+
+- (void)geoPointForCurrentLocationInBackground:(id)callback
+{
+  ENSURE_SINGLE_ARG(callback, KrollCallback);
+
+  [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint * _Nullable geoPoint, NSError * _Nullable error) {
+    if (error != nil) {
+      [callback call:@[@{
+        @"success": @(NO),
+        @"error": error.localizedDescription
+      }] thisObject:self];
+      return;
+    }
+
+    [callback call:@[@{
+      @"success": @(YES),
+      @"geoPoint": [[TiLivequeryGeoPointProxy alloc] _initWithPageContext:self.pageContext andGeoPoint:geoPoint]
+    }] thisObject:self];
+  }];
+}
+
+- (TiLivequeryPolygonProxy *)polygonFromCoordinates:(id)coordinates
+{
+  ENSURE_SINGLE_ARG(coordinates, NSArray);
+
+  NSMutableArray *nativeCoordinates = [NSMutableArray arrayWithCapacity:[(NSArray *)coordinates count]];
+
+  [(NSArray *)coordinates enumerateObjectsUsingBlock:^(TiLivequeryGeoPointProxy *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [nativeCoordinates addObject:obj.geoPoint];
+  }];
+  
+  PFPolygon *polygon = [PFPolygon polygonWithCoordinates:nativeCoordinates];
+}
+
 MAKE_SYSTEM_PROP(EVENT_TYPE_ENTERED, PFLiveQueryEventTypeEntered);
 MAKE_SYSTEM_PROP(EVENT_TYPE_LEFT, PFLiveQueryEventTypeLeft);
 MAKE_SYSTEM_PROP(EVENT_TYPE_CREATED, PFLiveQueryEventTypeCreated);
