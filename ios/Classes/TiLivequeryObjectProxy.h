@@ -13,6 +13,8 @@
 
 - (id)_initWithPageContext:(id<TiEvaluator>)context andObject:(PFObject *)object;
 
+- (PFObject *)object;
+
 - (NSString *)parseClassName;
 
 - (NSString *)objectId;

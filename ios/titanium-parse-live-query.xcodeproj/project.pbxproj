@@ -26,11 +26,13 @@
 		24DD6CFA1134B3F500162E58 /* TiLivequeryModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* TiLivequeryModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* TiLivequeryModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* TiLivequeryModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* TiLivequeryModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */; };
-		3A2B7EA427AE999F004B9D3B /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B7E9F27AE999F004B9D3B /* BoltsSwift.framework */; };
-		3A2B7EA527AE999F004B9D3B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B7EA027AE999F004B9D3B /* Bolts.framework */; };
-		3A2B7EA627AE999F004B9D3B /* ParseLiveQuery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B7EA127AE999F004B9D3B /* ParseLiveQuery.framework */; };
-		3A2B7EA727AE999F004B9D3B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B7EA227AE999F004B9D3B /* Parse.framework */; };
-		3A2B7EA827AE999F004B9D3B /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B7EA327AE999F004B9D3B /* Starscream.framework */; };
+		3A0FF1C228619E9F0051286C /* TiLivequeryRelationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A0FF1C028619E9F0051286C /* TiLivequeryRelationProxy.h */; };
+		3A0FF1C328619E9F0051286C /* TiLivequeryRelationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0FF1C128619E9F0051286C /* TiLivequeryRelationProxy.m */; };
+		3A3172CF28620F9A00CAE1E7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CA28620F9A00CAE1E7 /* Bolts.framework */; };
+		3A3172D028620F9A00CAE1E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CB28620F9A00CAE1E7 /* Parse.framework */; };
+		3A3172D128620F9A00CAE1E7 /* ParseLiveQuery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CC28620F9A00CAE1E7 /* ParseLiveQuery.framework */; };
+		3A3172D228620F9A00CAE1E7 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CD28620F9A00CAE1E7 /* Starscream.framework */; };
+		3A3172D328620F9A00CAE1E7 /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CE28620F9A00CAE1E7 /* BoltsSwift.framework */; };
 		3A439CD427B1C59000E027D6 /* TiLivequeryGeoPointProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A439CD227B1C59000E027D6 /* TiLivequeryGeoPointProxy.m */; };
 		3A439CD527B1C59000E027D6 /* TiLivequeryGeoPointProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */; };
 		3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */; };
@@ -60,11 +62,13 @@
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
 		24DE9E0F11C5FE74003F90F6 /* TiLivequeryModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryModuleAssets.h; path = Classes/TiLivequeryModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryModuleAssets.m; path = Classes/TiLivequeryModuleAssets.m; sourceTree = "<group>"; };
-		3A2B7E9F27AE999F004B9D3B /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoltsSwift.framework; path = platform/BoltsSwift.framework; sourceTree = "<group>"; };
-		3A2B7EA027AE999F004B9D3B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = platform/Bolts.framework; sourceTree = "<group>"; };
-		3A2B7EA127AE999F004B9D3B /* ParseLiveQuery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseLiveQuery.framework; path = platform/ParseLiveQuery.framework; sourceTree = "<group>"; };
-		3A2B7EA227AE999F004B9D3B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = platform/Parse.framework; sourceTree = "<group>"; };
-		3A2B7EA327AE999F004B9D3B /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = platform/Starscream.framework; sourceTree = "<group>"; };
+		3A0FF1C028619E9F0051286C /* TiLivequeryRelationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryRelationProxy.h; path = Classes/TiLivequeryRelationProxy.h; sourceTree = "<group>"; };
+		3A0FF1C128619E9F0051286C /* TiLivequeryRelationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryRelationProxy.m; path = Classes/TiLivequeryRelationProxy.m; sourceTree = "<group>"; };
+		3A3172CA28620F9A00CAE1E7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = platform/Bolts.framework; sourceTree = "<group>"; };
+		3A3172CB28620F9A00CAE1E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = platform/Parse.framework; sourceTree = "<group>"; };
+		3A3172CC28620F9A00CAE1E7 /* ParseLiveQuery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseLiveQuery.framework; path = platform/ParseLiveQuery.framework; sourceTree = "<group>"; };
+		3A3172CD28620F9A00CAE1E7 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = platform/Starscream.framework; sourceTree = "<group>"; };
+		3A3172CE28620F9A00CAE1E7 /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoltsSwift.framework; path = platform/BoltsSwift.framework; sourceTree = "<group>"; };
 		3A439CD227B1C59000E027D6 /* TiLivequeryGeoPointProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryGeoPointProxy.m; path = Classes/TiLivequeryGeoPointProxy.m; sourceTree = "<group>"; };
 		3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryGeoPointProxy.h; path = Classes/TiLivequeryGeoPointProxy.h; sourceTree = "<group>"; };
 		3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryPolygonProxy.m; path = Classes/TiLivequeryPolygonProxy.m; sourceTree = "<group>"; };
@@ -84,11 +88,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2B7EA427AE999F004B9D3B /* BoltsSwift.framework in Frameworks */,
-				3A2B7EA527AE999F004B9D3B /* Bolts.framework in Frameworks */,
-				3A2B7EA727AE999F004B9D3B /* Parse.framework in Frameworks */,
-				3A2B7EA827AE999F004B9D3B /* Starscream.framework in Frameworks */,
-				3A2B7EA627AE999F004B9D3B /* ParseLiveQuery.framework in Frameworks */,
+				3A3172D028620F9A00CAE1E7 /* Parse.framework in Frameworks */,
+				3A3172D228620F9A00CAE1E7 /* Starscream.framework in Frameworks */,
+				3A3172D328620F9A00CAE1E7 /* BoltsSwift.framework in Frameworks */,
+				3A3172CF28620F9A00CAE1E7 /* Bolts.framework in Frameworks */,
+				3A3172D128620F9A00CAE1E7 /* ParseLiveQuery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,11 +121,11 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3A2B7EA027AE999F004B9D3B /* Bolts.framework */,
-				3A2B7E9F27AE999F004B9D3B /* BoltsSwift.framework */,
-				3A2B7EA227AE999F004B9D3B /* Parse.framework */,
-				3A2B7EA127AE999F004B9D3B /* ParseLiveQuery.framework */,
-				3A2B7EA327AE999F004B9D3B /* Starscream.framework */,
+				3A3172CA28620F9A00CAE1E7 /* Bolts.framework */,
+				3A3172CE28620F9A00CAE1E7 /* BoltsSwift.framework */,
+				3A3172CB28620F9A00CAE1E7 /* Parse.framework */,
+				3A3172CC28620F9A00CAE1E7 /* ParseLiveQuery.framework */,
+				3A3172CD28620F9A00CAE1E7 /* Starscream.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,6 +135,7 @@
 			children = (
 				DBC8A09A208E0B34007EAC38 /* Module */,
 				3A439CD127B1C57000E027D6 /* Polygon */,
+				3A0FF1BF28619E860051286C /* Relation */,
 				3A439CD027B1C55F00E027D6 /* GeoPoint */,
 				DBC8A099208E0B2D007EAC38 /* Query */,
 				DBC8A098208E0B29007EAC38 /* Client */,
@@ -148,6 +153,15 @@
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		3A0FF1BF28619E860051286C /* Relation */ = {
+			isa = PBXGroup;
+			children = (
+				3A0FF1C028619E9F0051286C /* TiLivequeryRelationProxy.h */,
+				3A0FF1C128619E9F0051286C /* TiLivequeryRelationProxy.m */,
+			);
+			name = Relation;
 			sourceTree = "<group>";
 		};
 		3A439CD027B1C55F00E027D6 /* GeoPoint */ = {
@@ -212,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9F1F042080CC2C002C2AA1 /* TiLivequeryQueryProxy.h in Headers */,
+				3A0FF1C228619E9F0051286C /* TiLivequeryRelationProxy.h in Headers */,
 				3A55C2EA27B1C8950004691A /* TiLivequeryPolygonProxy.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */,
 				3A439CD527B1C59000E027D6 /* TiLivequeryGeoPointProxy.h in Headers */,
@@ -290,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0FF1C328619E9F0051286C /* TiLivequeryRelationProxy.m in Sources */,
 				DB127EE7207CC34B00D41D9A /* TiLivequeryClientProxy.m in Sources */,
 				24DD6CFA1134B3F500162E58 /* TiLivequeryModule.m in Sources */,
 				DB9F1F052080CC2C002C2AA1 /* TiLivequeryQueryProxy.m in Sources */,
@@ -319,6 +335,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/TiLivequery.dst;
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/platform",
@@ -364,6 +381,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = /tmp/TiLivequery.dst;
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/platform",

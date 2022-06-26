@@ -5,6 +5,8 @@
  */
 
 #import "TiLivequeryObjectProxy.h"
+#import "TiLivequeryRelationProxy.h"
+#import "TiLivequeryGeoPointProxy.h"
 
 @implementation TiLivequeryObjectProxy
 
@@ -15,6 +17,11 @@
   }
 
   return self;
+}
+
+- (PFObject *)object
+{
+  return _object;
 }
 
 - (NSString *)parseClassName
@@ -45,7 +52,40 @@
 - (id)objectForKey:(id)key
 {
   ENSURE_SINGLE_ARG(key, NSObject);
-  return [_object objectForKey:key];
+  NSLog(@"[DEBUG] Calling objectForKey with key = %@", key);
+  
+  id object = [_object objectForKey:key];
+
+  if (![object isKindOfClass:[NSArray class]]) {
+    return object;
+  }
+
+  NSMutableArray *result = [NSMutableArray arrayWithCapacity:[(NSArray *)object count]];
+
+  [object enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    NSLog(@"[WARN] Checking element at index = %li, type = %@", idx, NSStringFromClass([obj class]));
+
+    // Rewrite native classes
+    if ([obj isKindOfClass:[PFRelation class]]) {
+      NSLog(@"[DEBUG] Detected PFRelation - mapping …");
+      PFRelation *relation = (PFRelation *)obj;
+      [result addObject:[[TiLivequeryRelationProxy alloc] _initWithPageContext:pageContext andRelation:relation]];
+    } else if ([obj isKindOfClass:[PFGeoPoint class]]) {
+      NSLog(@"[DEBUG] Detected PFGeoPoint - mapping …");
+      PFGeoPoint *geoPoint = (PFGeoPoint *)obj;
+      [result addObject:[[TiLivequeryGeoPointProxy alloc] _initWithPageContext:pageContext andGeoPoint:geoPoint]];
+    } else if ([obj isKindOfClass:[PFObject class]]) {
+      NSLog(@"[DEBUG] Detected PFObject - mapping …");
+      PFObject *pfObject = (PFObject *)obj;
+      [result addObject:[[TiLivequeryObjectProxy alloc] _initWithPageContext:pageContext andObject:pfObject]];
+    } else {
+      [result addObject:obj];
+    }
+  }];
+
+  NSLog(@"[DEBUG] Done mapping values - returning value to JS side …");
+  
+  return result;
 }
 
 - (void)add:(id)args
@@ -146,6 +186,13 @@
       } ] thisObject:self];
     }];
   }
+}
+
+- (void)pinAllInBackground:(id)callback
+{
+  ENSURE_SINGLE_ARG_OR_NIL(callback, KrollCallback);
+
+  // [_object pinAllInBackground:@[]];
 }
 
 - (void)fetchFromLocalDatastoreInBackground:(id)callback
