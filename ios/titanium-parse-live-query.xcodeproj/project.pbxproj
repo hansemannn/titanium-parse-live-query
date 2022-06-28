@@ -28,6 +28,8 @@
 		24DE9E1211C5FE74003F90F6 /* TiLivequeryModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */; };
 		3A0FF1C228619E9F0051286C /* TiLivequeryRelationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A0FF1C028619E9F0051286C /* TiLivequeryRelationProxy.h */; };
 		3A0FF1C328619E9F0051286C /* TiLivequeryRelationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0FF1C128619E9F0051286C /* TiLivequeryRelationProxy.m */; };
+		3A25F56B286B221F00BB00DB /* TiLivequeryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A25F56A286B221F00BB00DB /* TiLivequeryUtils.m */; };
+		3A25F56D286B22EC00BB00DB /* TiLivequeryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A25F56C286B22EC00BB00DB /* TiLivequeryUtils.h */; };
 		3A3172CF28620F9A00CAE1E7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CA28620F9A00CAE1E7 /* Bolts.framework */; };
 		3A3172D028620F9A00CAE1E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CB28620F9A00CAE1E7 /* Parse.framework */; };
 		3A3172D128620F9A00CAE1E7 /* ParseLiveQuery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CC28620F9A00CAE1E7 /* ParseLiveQuery.framework */; };
@@ -64,6 +66,8 @@
 		24DE9E1011C5FE74003F90F6 /* TiLivequeryModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryModuleAssets.m; path = Classes/TiLivequeryModuleAssets.m; sourceTree = "<group>"; };
 		3A0FF1C028619E9F0051286C /* TiLivequeryRelationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryRelationProxy.h; path = Classes/TiLivequeryRelationProxy.h; sourceTree = "<group>"; };
 		3A0FF1C128619E9F0051286C /* TiLivequeryRelationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryRelationProxy.m; path = Classes/TiLivequeryRelationProxy.m; sourceTree = "<group>"; };
+		3A25F56A286B221F00BB00DB /* TiLivequeryUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryUtils.m; path = Classes/TiLivequeryUtils.m; sourceTree = "<group>"; };
+		3A25F56C286B22EC00BB00DB /* TiLivequeryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryUtils.h; path = Classes/TiLivequeryUtils.h; sourceTree = "<group>"; };
 		3A3172CA28620F9A00CAE1E7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = platform/Bolts.framework; sourceTree = "<group>"; };
 		3A3172CB28620F9A00CAE1E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = platform/Parse.framework; sourceTree = "<group>"; };
 		3A3172CC28620F9A00CAE1E7 /* ParseLiveQuery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseLiveQuery.framework; path = platform/ParseLiveQuery.framework; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				DBC8A099208E0B2D007EAC38 /* Query */,
 				DBC8A098208E0B29007EAC38 /* Client */,
 				DBC8A097208E0B23007EAC38 /* Object */,
+				3A25F56E286B244800BB00DB /* Utils */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -162,6 +167,15 @@
 				3A0FF1C128619E9F0051286C /* TiLivequeryRelationProxy.m */,
 			);
 			name = Relation;
+			sourceTree = "<group>";
+		};
+		3A25F56E286B244800BB00DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3A25F56C286B22EC00BB00DB /* TiLivequeryUtils.h */,
+				3A25F56A286B221F00BB00DB /* TiLivequeryUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		3A439CD027B1C55F00E027D6 /* GeoPoint */ = {
@@ -229,6 +243,7 @@
 				3A0FF1C228619E9F0051286C /* TiLivequeryRelationProxy.h in Headers */,
 				3A55C2EA27B1C8950004691A /* TiLivequeryPolygonProxy.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */,
+				3A25F56D286B22EC00BB00DB /* TiLivequeryUtils.h in Headers */,
 				3A439CD527B1C59000E027D6 /* TiLivequeryGeoPointProxy.h in Headers */,
 				24DD6CF91134B3F500162E58 /* TiLivequeryModule.h in Headers */,
 				DBBA692620809E3700F8B67B /* TiLivequeryObjectProxy.h in Headers */,
@@ -313,6 +328,7 @@
 				24DE9E1211C5FE74003F90F6 /* TiLivequeryModuleAssets.m in Sources */,
 				3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */,
 				DBBA692720809E3700F8B67B /* TiLivequeryObjectProxy.m in Sources */,
+				3A25F56B286B221F00BB00DB /* TiLivequeryUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -377,6 +394,7 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = /tmp/TiLivequery.dst;
@@ -420,6 +438,7 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -485,6 +504,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;

@@ -8,7 +8,8 @@
 #import "TiLivequeryObjectProxy.h"
 #import "TiLivequeryGeoPointProxy.h"
 #import "TiLivequeryPolygonProxy.h"
-#import "TiUtils.h"
+#import "TiLivequeryRelationProxy.h"
+#import "TiLivequeryUtils.h"
 
 @implementation TiLivequeryQueryProxy
 
@@ -288,7 +289,12 @@
       return;
     }
     
-    NSMutableArray<TiLivequeryObjectProxy *> *result = [NSMutableArray arrayWithCapacity:objects.count];
+    NSMutableArray<id> *result = [NSMutableArray arrayWithCapacity:objects.count];
+    
+    [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+      NSLog(@"[WARN] Checking element at index = %li, type = %@", idx, NSStringFromClass([obj class]));
+      [result addObject:[TiLivequeryUtils mappedObject:obj withPageContext:self.pageContext]];
+    }];
     
     for (PFObject *object in objects) {
       [result addObject:[[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:object]];

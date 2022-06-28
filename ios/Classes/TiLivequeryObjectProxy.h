@@ -4,7 +4,7 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import "TiProxy.h"
+#import <TitaniumKit/TitaniumKit.h>
 #import <Parse/Parse.h>
 
 @interface TiLivequeryObjectProxy : TiProxy {

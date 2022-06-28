@@ -7,6 +7,7 @@
 #import "TiLivequeryObjectProxy.h"
 #import "TiLivequeryRelationProxy.h"
 #import "TiLivequeryGeoPointProxy.h"
+#import "TiLivequeryUtils.h"
 
 @implementation TiLivequeryObjectProxy
 
@@ -57,30 +58,14 @@
   id object = [_object objectForKey:key];
 
   if (![object isKindOfClass:[NSArray class]]) {
-    return object;
+    return [TiLivequeryUtils mappedObject:object withPageContext:self.pageContext];
   }
 
   NSMutableArray *result = [NSMutableArray arrayWithCapacity:[(NSArray *)object count]];
 
   [object enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
     NSLog(@"[WARN] Checking element at index = %li, type = %@", idx, NSStringFromClass([obj class]));
-
-    // Rewrite native classes
-    if ([obj isKindOfClass:[PFRelation class]]) {
-      NSLog(@"[DEBUG] Detected PFRelation - mapping …");
-      PFRelation *relation = (PFRelation *)obj;
-      [result addObject:[[TiLivequeryRelationProxy alloc] _initWithPageContext:pageContext andRelation:relation]];
-    } else if ([obj isKindOfClass:[PFGeoPoint class]]) {
-      NSLog(@"[DEBUG] Detected PFGeoPoint - mapping …");
-      PFGeoPoint *geoPoint = (PFGeoPoint *)obj;
-      [result addObject:[[TiLivequeryGeoPointProxy alloc] _initWithPageContext:pageContext andGeoPoint:geoPoint]];
-    } else if ([obj isKindOfClass:[PFObject class]]) {
-      NSLog(@"[DEBUG] Detected PFObject - mapping …");
-      PFObject *pfObject = (PFObject *)obj;
-      [result addObject:[[TiLivequeryObjectProxy alloc] _initWithPageContext:pageContext andObject:pfObject]];
-    } else {
-      [result addObject:obj];
-    }
+    [result addObject:[TiLivequeryUtils mappedObject:obj withPageContext:self.pageContext]];
   }];
 
   NSLog(@"[DEBUG] Done mapping values - returning value to JS side …");
@@ -245,6 +230,5 @@
 {
   [_object deleteEventually];
 }
-
 
 @end
