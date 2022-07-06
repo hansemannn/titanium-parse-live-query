@@ -21,4 +21,8 @@
 
 - (double)distanceInKilometersTo:(id)geoPoint;
 
+- (NSNumber *)latitude;
+
+- (NSNumber *)longitude;
+
 @end

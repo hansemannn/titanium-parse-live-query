@@ -292,7 +292,6 @@
     NSMutableArray<id> *result = [NSMutableArray arrayWithCapacity:objects.count];
     
     [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-      NSLog(@"[WARN] Checking element at index = %li, type = %@", idx, NSStringFromClass([obj class]));
       [result addObject:[TiLivequeryUtils mappedObject:obj withPageContext:self.pageContext]];
     }];
     

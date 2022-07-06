@@ -43,4 +43,14 @@
   return [_geoPoint distanceInKilometersTo:[(TiLivequeryGeoPointProxy *)geoPoint geoPoint]];
 }
 
+- (NSNumber *)latitude
+{
+  return @(_geoPoint.latitude);
+}
+
+- (NSNumber *)longitude
+{
+  return @(_geoPoint.longitude);
+}
+
 @end

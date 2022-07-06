@@ -53,7 +53,6 @@
 - (id)objectForKey:(id)key
 {
   ENSURE_SINGLE_ARG(key, NSObject);
-  NSLog(@"[DEBUG] Calling objectForKey with key = %@", key);
   
   id object = [_object objectForKey:key];
 
@@ -64,11 +63,8 @@
   NSMutableArray *result = [NSMutableArray arrayWithCapacity:[(NSArray *)object count]];
 
   [object enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-    NSLog(@"[WARN] Checking element at index = %li, type = %@", idx, NSStringFromClass([obj class]));
     [result addObject:[TiLivequeryUtils mappedObject:obj withPageContext:self.pageContext]];
   }];
-
-  NSLog(@"[DEBUG] Done mapping values - returning value to JS side …");
   
   return result;
 }
