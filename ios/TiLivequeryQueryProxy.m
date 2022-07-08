@@ -294,11 +294,7 @@
     [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
       [result addObject:[TiLivequeryUtils mappedObject:obj withPageContext:self.pageContext]];
     }];
-    
-    for (PFObject *object in objects) {
-      [result addObject:[[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:object]];
-    }
-    
+
     [callback call:@[@{ @"success": @YES, @"objects": result }] thisObject:self];
   }];
 }
