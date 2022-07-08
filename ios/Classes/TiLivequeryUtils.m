@@ -58,7 +58,7 @@
       
     };
   } else {
-    NSLog(@"[ERROR] Unhandled data type detected: %@", NSStringFromClass([obj class]));
+    NSLog(@"[DEBUG] Unhandled data type detected: %@", NSStringFromClass([obj class]));
     return obj;
   }
 }
