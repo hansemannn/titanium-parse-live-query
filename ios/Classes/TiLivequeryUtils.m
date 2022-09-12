@@ -27,6 +27,12 @@
     return obj;
   } else if ([obj isKindOfClass:[NSDictionary class]]) {
     return obj;
+  } else if ([obj isKindOfClass:[PFRole class]]) {
+    PFRole *role = (PFRole *)obj;
+    return role.name;
+  } else if ([obj isKindOfClass:[PFACL class]]) {
+    PFACL *acl = (PFACL *)obj;
+    return @{ @"publicWriteAccess": @([acl getPublicWriteAccess]), @"publicReadAccess": @([acl getPublicReadAccess]) };
   } else if ([obj isKindOfClass:[PFFileObject class]]) {
     PFFileObject *fileObject = (PFFileObject *)obj;
     return @{

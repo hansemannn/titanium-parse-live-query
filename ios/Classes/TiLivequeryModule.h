@@ -33,4 +33,10 @@
 
 - (TiLivequeryPolygonProxy *)polygonFromCoordinates:(id)coordinates;
 
+- (void)signUpInBackgroundWithBlock:(id)args;
+
+- (void)logInWithUsernameInBackground:(id)args;
+
+- (void)logOutInBackground:(id)args;
+
 @end

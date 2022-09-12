@@ -140,6 +140,55 @@
   PFPolygon *polygon = [PFPolygon polygonWithCoordinates:nativeCoordinates];
 }
 
+- (void)signUpInBackgroundWithBlock:(id)args
+{
+  ENSURE_SINGLE_ARG(args, NSDictionary);
+  
+  NSString *username = [TiUtils stringValue:@"username" properties:args];
+  NSString *password = [TiUtils stringValue:@"password" properties:args];
+  NSString *email = [TiUtils stringValue:@"email" properties:args];
+  KrollCallback *callback = (KrollCallback *)args[@"callback"];
+
+  PFUser *user = [PFUser user];
+  user.username = username;
+  user.password = password;
+  user.email = email;
+  
+  [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+    [callback call:@[@{ @"success": @(succeeded), @"error": error ? error.localizedDescription : NSNull.null }] thisObject:self];
+  }];
+}
+
+- (void)logInWithUsernameInBackground:(id)args
+{
+  ENSURE_SINGLE_ARG(args, NSDictionary);
+  
+  NSString *username = [TiUtils stringValue:@"username" properties:args];
+  NSString *password = [TiUtils stringValue:@"password" properties:args];
+  KrollCallback *callback = (KrollCallback *)args[@"callback"];
+
+  [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+    if (user != nil) {
+      [callback call:@[@{ @"success": @(YES), @"sessionToken": user.sessionToken }] thisObject:self];
+    } else {
+      [callback call:@[@{ @"success": @(NO), @"error": error.localizedDescription }] thisObject:self];
+    }
+  }];
+}
+
+- (void)logOutInBackground:(id)args
+{
+  ENSURE_SINGLE_ARG_OR_NIL(args, NSDictionary);
+  
+  KrollCallback *callback = (KrollCallback *)args[@"callback"];
+
+  [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+    if (callback != nil) {
+      [callback call:@[@{ @"success": @(error == nil), @"error": error ? error.localizedDescription : NSNull.null }] thisObject:self];
+    }
+  }];
+}
+
 MAKE_SYSTEM_PROP(EVENT_TYPE_ENTERED, PFLiveQueryEventTypeEntered);
 MAKE_SYSTEM_PROP(EVENT_TYPE_LEFT, PFLiveQueryEventTypeLeft);
 MAKE_SYSTEM_PROP(EVENT_TYPE_CREATED, PFLiveQueryEventTypeCreated);

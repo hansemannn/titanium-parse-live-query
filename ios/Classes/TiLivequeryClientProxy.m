@@ -76,7 +76,7 @@
   if ([self _hasListeners:@"event"]) {
     [self fireEvent:@"event"
          withObject:@{
-           @"type" : @(event.type),
+           @"eventType" : @(event.type),
            @"object" : [[TiLivequeryObjectProxy alloc] _initWithPageContext:self.pageContext andObject:event.object],
            @"query" : [[TiLivequeryQueryProxy alloc] _initWithPageContext:self.pageContext andQuery:query]
          }];
