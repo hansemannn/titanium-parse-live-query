@@ -13,7 +13,7 @@ to expose new features, e.g. query subscriptions.
 
 - [x] iOS: Swift 5+ (embedded into the hook in `hooks/`), iOS 9.2.0+
 - [x] Android: Gradle, Android 4.1+
-- [x] Titanium SDK 6.3.0+ (7.0.0+ for Android)
+- [x] Titanium SDK 9.2.0+
 
 ## Usage with Ti.Facenook
 
@@ -111,7 +111,7 @@ Add the following to the `<android>` manifest section of the tiapp.xml:
 
 ##### `event`
 
-- `type` (`EVENT_TYPE_*`)
+- `eventType` (`EVENT_TYPE_*`)
 - `object` (`Object`)
 - `query` (`Query`)
 
@@ -244,6 +244,23 @@ Note: If you use predicates, you may constraint your query for additional `where
 ##### `setObjectForKey(object, key)`
 
 ##### `removeObjectForKey(key)` 
+
+##### `signUpInBackgroundWithBlock({ username, password, email, callback })`
+
+- `username`: The unique username of the user.
+- `password`: The unique password of the user.
+- `email`: The email address of the user.
+- `callback`: The callback to be invoked if the user has been created (success: true) or if something went wrong (success: false, error: xxx)
+
+##### `logInWithUsernameInBackground({ username, password callback })`
+
+- `username`: The unique username of the user.
+- `password`: The unique password of the user.
+- `callback`: The callback to be invoked if the user has been logged in (success: true, sessionToken: xxx) or if something went wrong (success: false, error: xxx)
+
+##### `logOutInBackground({ callback })` 
+
+- `callback`: The callback to be invoked if the user has been logged out (success: true) or if something went wrong (success: false, error: xxx)
 
 ##### `deleteObject(callback)` -> Varying 
 
