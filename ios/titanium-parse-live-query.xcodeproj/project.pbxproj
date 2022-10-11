@@ -39,6 +39,8 @@
 		3A439CD527B1C59000E027D6 /* TiLivequeryGeoPointProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */; };
 		3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */; };
 		3A55C2EA27B1C8950004691A /* TiLivequeryPolygonProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */; };
+		3AA2EF8B28F5F7AB0044DB63 /* TiLivequeryFileProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */; };
+		3AA2EF8C28F5F7AB0044DB63 /* TiLivequeryFileProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */; };
 		AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */; };
 		DB127EE6207CC34B00D41D9A /* TiLivequeryClientProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */; };
 		DB127EE7207CC34B00D41D9A /* TiLivequeryClientProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */; };
@@ -77,6 +79,8 @@
 		3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryGeoPointProxy.h; path = Classes/TiLivequeryGeoPointProxy.h; sourceTree = "<group>"; };
 		3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryPolygonProxy.m; path = Classes/TiLivequeryPolygonProxy.m; sourceTree = "<group>"; };
 		3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryPolygonProxy.h; path = Classes/TiLivequeryPolygonProxy.h; sourceTree = "<group>"; };
+		3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryFileProxy.h; path = Classes/TiLivequeryFileProxy.h; sourceTree = "<group>"; };
+		3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryFileProxy.m; path = Classes/TiLivequeryFileProxy.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLivequery_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libti.livequery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.livequery.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryClientProxy.h; path = Classes/TiLivequeryClientProxy.h; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3AA2EF8628F5F77A0044DB63 /* File */,
 				DBC8A09A208E0B34007EAC38 /* Module */,
 				3A439CD127B1C57000E027D6 /* Polygon */,
 				3A0FF1BF28619E860051286C /* Relation */,
@@ -196,6 +201,15 @@
 			name = Polygon;
 			sourceTree = "<group>";
 		};
+		3AA2EF8628F5F77A0044DB63 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */,
+				3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
 		DBC8A097208E0B23007EAC38 /* Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +263,7 @@
 				DBBA692620809E3700F8B67B /* TiLivequeryObjectProxy.h in Headers */,
 				DB127EE6207CC34B00D41D9A /* TiLivequeryClientProxy.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* TiLivequeryModuleAssets.h in Headers */,
+				3AA2EF8B28F5F7AB0044DB63 /* TiLivequeryFileProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +343,7 @@
 				24DE9E1211C5FE74003F90F6 /* TiLivequeryModuleAssets.m in Sources */,
 				3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */,
 				DBBA692720809E3700F8B67B /* TiLivequeryObjectProxy.m in Sources */,
+				3AA2EF8C28F5F7AB0044DB63 /* TiLivequeryFileProxy.m in Sources */,
 				3A25F56B286B221F00BB00DB /* TiLivequeryUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
