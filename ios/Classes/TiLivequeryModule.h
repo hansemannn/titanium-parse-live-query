@@ -21,6 +21,8 @@
 
 - (void)setLogLevel:(id)logLevel;
 
+- (void)becomeInBackground:(id)args;
+
 - (void)saveObject:(id)args;
 
 - (void)clearAllCachedResults:(id)unused;

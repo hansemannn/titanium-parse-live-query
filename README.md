@@ -70,6 +70,11 @@ Add the following to the `<android>` manifest section of the tiapp.xml:
 
 ##### `objectWithClassName(className)` **iOS only**
 
+##### `becomeInBackground(args)` **iOS only**
+
+- `sessionToken` (String)
+- `callback` (Function - optional)
+
 #### Constants **iOS only**
 
 ##### EVENT_TYPE_ENTERED

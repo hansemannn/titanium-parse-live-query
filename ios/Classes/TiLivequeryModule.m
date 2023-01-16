@@ -54,6 +54,26 @@
   [Parse setLogLevel:[TiUtils intValue:logLevel]];
 }
 
+- (void)becomeInBackground:(id)args
+{
+  ENSURE_SINGLE_ARG(args, NSDictionary);
+
+  NSString *sessionToken = [args objectForKey:@"sessionToken"];
+  KrollCallback *callback = [args objectForKey:@"callback"];
+
+  if (callback != nil) {
+    [PFUser becomeInBackground:sessionToken block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+      if (error != nil) {
+        [callback call:@[@{ @"success": @(NO), @"error": error.localizedDescription }] thisObject:self];
+      } else {
+        [callback call:@[@{ @"success": @(YES) }] thisObject:self];
+      }
+    }];
+  } else {
+    [PFUser becomeInBackground:sessionToken];
+  }
+}
+
 // TODO: Move to TiLiveQueryObject instead
 - (void)saveObject:(id)args
 {
