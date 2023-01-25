@@ -13,4 +13,6 @@
 
 + (id)mappedObject:(id)obj withPageContext:(id<TiEvaluator>)pageContext;
 
++ (NSString *)mimeTypeForData:(NSData *)data;
+
 @end

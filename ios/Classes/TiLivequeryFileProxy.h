@@ -12,6 +12,10 @@
   PFFileObject *_file;
 }
 
+- (void)getDataInBackgroundWithBlock:(id)args;
+
 - (void)saveDataInBackground:(NSArray *)args;
+
+- (PFFileObject *)file;
 
 @end

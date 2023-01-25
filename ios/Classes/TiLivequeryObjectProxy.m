@@ -7,6 +7,7 @@
 #import "TiLivequeryObjectProxy.h"
 #import "TiLivequeryRelationProxy.h"
 #import "TiLivequeryGeoPointProxy.h"
+#import "TiLivequeryFileProxy.h"
 #import "TiLivequeryUtils.h"
 
 @implementation TiLivequeryObjectProxy
@@ -73,6 +74,11 @@
 {
   id key = [args objectAtIndex:0];
   id value = [args objectAtIndex:1];
+
+  // Unbox previously boxed value
+  if ([value isKindOfClass:[TiLivequeryFileProxy class]]) {
+    value = [(TiLivequeryFileProxy *) value file];
+  }
 
   return [_object setObject:value forKey:key];
 }

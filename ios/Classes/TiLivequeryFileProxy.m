@@ -7,6 +7,8 @@
 
 #import "TiLivequeryFileProxy.h"
 #import "TiBlob.h"
+#import "TiBase.h"
+#import "TiLivequeryUtils.h"
 
 @implementation TiLivequeryFileProxy
 
@@ -21,18 +23,52 @@
   return self;
 }
 
+- (void)getDataInBackgroundWithBlock:(id)callback
+{
+  ENSURE_SINGLE_ARG(callback, KrollCallback);
+
+  [_file getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+    NSDictionary *event = @{
+      @"success": @(error == nil),
+      @"file": [[TiBlob alloc] initWithData:data mimetype:[TiLivequeryUtils mimeTypeForData:data]],
+      @"error": error ? error.localizedDescription : NSNull.null
+    };
+
+    [callback call:@[event] thisObject:self];
+  }];
+}
+
 - (void)saveDataInBackground:(NSArray *)args
 {
   KrollCallback *saveCallback = args[0];
-  KrollCallback *progressCallback = args[1];
+  KrollCallback *progressCallback = nil;
+  
+  if (args.count > 1) {
+    progressCallback = args[1];
+  }
 
   [_file saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-    NSDictionary *event = @{ @"success": @(succeeded), @"error": error ? error.localizedDescription : NSNull.null };
+    NSDictionary *event = @{
+      @"success": @(succeeded),
+      @"file": self,
+      @"error": error ? error.localizedDescription : NSNull.null
+    };
+
     [saveCallback call:@[event] thisObject:self];
   } progressBlock:^(int percentDone) {
-    NSDictionary *event = @{ @"progress": @(percentDone) };
-    [progressCallback call:@[event] thisObject:self];
+    NSDictionary *event = @{
+      @"progress": @(percentDone)
+    };
+    
+    if (progressCallback != nil) {
+      [progressCallback call:@[event] thisObject:self];
+    }
   }];
+}
+
+- (PFFileObject *)file
+{
+  return _file;
 }
 
 @end
