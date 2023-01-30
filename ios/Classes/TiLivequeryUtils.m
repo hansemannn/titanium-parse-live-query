@@ -9,6 +9,7 @@
 #import "TiLivequeryRelationProxy.h"
 #import "TiLivequeryGeoPointProxy.h"
 #import "TiLivequeryObjectProxy.h"
+#import "TiLivequeryFileProxy.h"
 
 @implementation TiLivequeryUtils
 
@@ -35,11 +36,7 @@
     return @{ @"publicWriteAccess": @([acl getPublicWriteAccess]), @"publicReadAccess": @([acl getPublicReadAccess]) };
   } else if ([obj isKindOfClass:[PFFileObject class]]) {
     PFFileObject *fileObject = (PFFileObject *)obj;
-    return @{
-      @"name": fileObject.name,
-      @"url": NULL_IF_NIL(fileObject.url),
-      @"dirty": @(fileObject.dirty)
-    };
+    return [[TiLivequeryFileProxy alloc] _initWithPageContext:pageContext andFile:fileObject];
   } else if ([obj isKindOfClass:[PFPolygon class]]) {
     PFPolygon *polygon = (PFPolygon *)obj;
     NSMutableArray<id> *coordinates = [NSMutableArray arrayWithCapacity:polygon.coordinates.count];

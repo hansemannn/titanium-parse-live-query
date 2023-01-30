@@ -12,16 +12,37 @@
 
 @implementation TiLivequeryFileProxy
 
+#pragma mark Internal Module APIs
+
+- (PFFileObject *)file
+{
+  return _file;
+}
+
 - (id)_initWithPageContext:(id<TiEvaluator>)context args:(NSArray *)args
 {
-  NSDictionary *params = (NSDictionary *)args.firstObject;
-  NSString *fileName = params[@"fileName"];
-  TiBlob *fileData = params[@"fileData"];
-  
-  _file = [PFFileObject fileObjectWithName:fileName data:[fileData data]];
+  if (self = [super _initWithPageContext:context]) {
+    
+    NSDictionary *params = (NSDictionary *)args.firstObject;
+    NSString *fileName = params[@"fileName"];
+    TiBlob *fileData = params[@"fileData"];
+    
+    _file = [PFFileObject fileObjectWithName:fileName data:[fileData data]];
+  }
+
+  return self;
+}
+
+- (id)_initWithPageContext:(id<TiEvaluator>)context andFile:(PFFileObject *)file
+{
+  if (self = [super _initWithPageContext:context]) {
+    _file = file;
+  }
   
   return self;
 }
+
+#pragma mark Public APIs
 
 - (void)getDataInBackgroundWithBlock:(id)callback
 {
@@ -66,9 +87,19 @@
   }];
 }
 
-- (PFFileObject *)file
+- (NSString *)name
 {
-  return _file;
+  return _file.name;
+}
+
+- (NSString *)url
+{
+  return NULL_IF_NIL(_file.url);
+}
+
+- (NSNumber *)dirty
+{
+  return @(_file.isDirty);
 }
 
 @end

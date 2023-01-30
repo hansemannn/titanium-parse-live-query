@@ -12,10 +12,24 @@
   PFFileObject *_file;
 }
 
+#pragma mark Internal Module APIs
+
+- (id)_initWithPageContext:(id<TiEvaluator>)context args:(NSArray *)args;
+
+- (id)_initWithPageContext:(id<TiEvaluator>)context andFile:(PFFileObject *)file;
+
+- (PFFileObject *)file;
+
+#pragma mark Public APIs
+
 - (void)getDataInBackgroundWithBlock:(id)args;
 
 - (void)saveDataInBackground:(NSArray *)args;
 
-- (PFFileObject *)file;
+- (NSString *)name;
+
+- (NSString *)url;
+
+- (NSNumber *)dirty;
 
 @end
