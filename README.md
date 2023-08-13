@@ -99,10 +99,9 @@ Add the following to the `<android>` manifest section of the tiapp.xml:
 
 - `query` (`Query`)
 
-##### `unsubscribeFromQuery(args)`
+##### `unsubscribeFromQuery(query)`
 
-- `className` (String)
-- `query` (String)
+- `query` (`Query`)
 
 #### Events **iOS only**
 
