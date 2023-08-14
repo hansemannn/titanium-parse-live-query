@@ -37,6 +37,9 @@
   } else if ([obj isKindOfClass:[PFFileObject class]]) {
     PFFileObject *fileObject = (PFFileObject *)obj;
     return [[TiLivequeryFileProxy alloc] _initWithPageContext:pageContext andFile:fileObject];
+  } else if ([obj isKindOfClass:[PFUser class]]) {
+    PFUser *user = (PFUser *)obj;
+    return [TiLivequeryUtils mappedUser:user];
   } else if ([obj isKindOfClass:[PFPolygon class]]) {
     PFPolygon *polygon = (PFPolygon *)obj;
     NSMutableArray<id> *coordinates = [NSMutableArray arrayWithCapacity:polygon.coordinates.count];
@@ -100,5 +103,31 @@
     return nil;
 }
 
++(NSDictionary *)mappedUser:(PFUser *)user
+{
+  // Append base properties
+  NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:@{
+    @"identifier": NULL_IF_NIL(user.objectId), // can be null
+    @"createdAt": NULL_IF_NIL(user.createdAt), // can be null
+    @"updatedAt": NULL_IF_NIL(user.updatedAt), // can be null
+    @"username": NULL_IF_NIL(user.username), // can be null
+    @"email": NULL_IF_NIL(user.email), // can be null
+    @"password": NULL_IF_NIL(user.password), // can be null
+  }];
+  
+  // Append additional properties
+  NSArray<NSString *> *keys = [user allKeys];
+  for (NSString *key in keys) {
+    // Check if we have the key
+    id value = [user objectForKey:key];
+    
+    // If we do, append it to our user object
+    if (value) {
+      dict[key] = value;
+    }
+  }
+
+  return dict;
+}
 
 @end
