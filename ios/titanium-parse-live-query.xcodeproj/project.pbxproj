@@ -3,23 +3,8 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
-
-/* Begin PBXAggregateTarget section */
-		24416B8111C4CA220047AFDD /* Build & Test */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */;
-			buildPhases = (
-				24416B8011C4CA220047AFDD /* ShellScript */,
-			);
-			dependencies = (
-				24416B8511C4CA280047AFDD /* PBXTargetDependency */,
-			);
-			name = "Build & Test";
-			productName = "Build & test";
-		};
-/* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		24DD6CF91134B3F500162E58 /* TiLivequeryModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* TiLivequeryModule.h */; };
@@ -39,6 +24,7 @@
 		3A439CD527B1C59000E027D6 /* TiLivequeryGeoPointProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */; };
 		3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */; };
 		3A55C2EA27B1C8950004691A /* TiLivequeryPolygonProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */; };
+		3A70246C2EA6EE9500D2F295 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */; };
 		3AA2EF8B28F5F7AB0044DB63 /* TiLivequeryFileProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */; };
 		3AA2EF8C28F5F7AB0044DB63 /* TiLivequeryFileProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */; };
 		AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */; };
@@ -49,16 +35,6 @@
 		DBBA692620809E3700F8B67B /* TiLivequeryObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DBBA692420809E3700F8B67B /* TiLivequeryObjectProxy.h */; };
 		DBBA692720809E3700F8B67B /* TiLivequeryObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA692520809E3700F8B67B /* TiLivequeryObjectProxy.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		24416B8411C4CA280047AFDD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "titanium-parse-live-query";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		24DD6CF71134B3F500162E58 /* TiLivequeryModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryModule.h; path = Classes/TiLivequeryModule.h; sourceTree = "<group>"; };
@@ -79,6 +55,7 @@
 		3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryGeoPointProxy.h; path = Classes/TiLivequeryGeoPointProxy.h; sourceTree = "<group>"; };
 		3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryPolygonProxy.m; path = Classes/TiLivequeryPolygonProxy.m; sourceTree = "<group>"; };
 		3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryPolygonProxy.h; path = Classes/TiLivequeryPolygonProxy.h; sourceTree = "<group>"; };
+		3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "/Users/hans/Library/Application Support/Titanium/mobilesdk/osx/13.1.0/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<absolute>"; };
 		3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryFileProxy.h; path = Classes/TiLivequeryFileProxy.h; sourceTree = "<group>"; };
 		3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryFileProxy.m; path = Classes/TiLivequeryFileProxy.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLivequery_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -99,6 +76,7 @@
 				3A3172D028620F9A00CAE1E7 /* Parse.framework in Frameworks */,
 				3A3172D228620F9A00CAE1E7 /* Starscream.framework in Frameworks */,
 				3A3172D328620F9A00CAE1E7 /* BoltsSwift.framework in Frameworks */,
+				3A70246C2EA6EE9500D2F295 /* TitaniumKit.xcframework in Frameworks */,
 				3A3172CF28620F9A00CAE1E7 /* Bolts.framework in Frameworks */,
 				3A3172D128620F9A00CAE1E7 /* ParseLiveQuery.framework in Frameworks */,
 			);
@@ -129,6 +107,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */,
 				3A3172CA28620F9A00CAE1E7 /* Bolts.framework */,
 				3A3172CE28620F9A00CAE1E7 /* BoltsSwift.framework */,
 				3A3172CB28620F9A00CAE1E7 /* Parse.framework */,
@@ -293,7 +272,8 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1310;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "titanium-parse-live-query" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -309,26 +289,9 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* titanium-parse-live-query */,
-				24416B8111C4CA220047AFDD /* Build & Test */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		24416B8011C4CA220047AFDD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here\n\nappc run --project-dir \"${PROJECT_DIR}\"\nexit $?\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC07B0554694100DB518D /* Sources */ = {
@@ -349,14 +312,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* titanium-parse-live-query */;
-			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
@@ -388,7 +343,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -437,7 +392,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
@@ -478,6 +433,7 @@
 				DSTROOT = /tmp/TiLivequery.dst;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -510,6 +466,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -541,6 +498,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DSTROOT = /tmp/TiLivequery.dst;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -567,31 +525,8 @@
 				PRODUCT_NAME = ti.livequery;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				USER_HEADER_SEARCH_PATHS = "";
-			};
-			name = Release;
-		};
-		24416B8211C4CA220047AFDD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Build & test";
-			};
-			name = Debug;
-		};
-		24416B8311C4CA220047AFDD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				PRODUCT_NAME = "Build & test";
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -612,15 +547,6 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24416B8211C4CA220047AFDD /* Debug */,
-				24416B8311C4CA220047AFDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
