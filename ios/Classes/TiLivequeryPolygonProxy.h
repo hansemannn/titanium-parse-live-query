@@ -5,7 +5,6 @@
  */
 
 #import <TitaniumKit/TitaniumKit.h>
-#import <Parse/Parse.h>
 #import "TiLivequeryGeoPointProxy.h"
 
 @interface TiLivequeryPolygonProxy : TiProxy {

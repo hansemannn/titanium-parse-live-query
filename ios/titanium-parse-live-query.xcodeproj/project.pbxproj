@@ -15,11 +15,6 @@
 		3A0FF1C328619E9F0051286C /* TiLivequeryRelationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0FF1C128619E9F0051286C /* TiLivequeryRelationProxy.m */; };
 		3A25F56B286B221F00BB00DB /* TiLivequeryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A25F56A286B221F00BB00DB /* TiLivequeryUtils.m */; };
 		3A25F56D286B22EC00BB00DB /* TiLivequeryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A25F56C286B22EC00BB00DB /* TiLivequeryUtils.h */; };
-		3A3172CF28620F9A00CAE1E7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CA28620F9A00CAE1E7 /* Bolts.framework */; };
-		3A3172D028620F9A00CAE1E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CB28620F9A00CAE1E7 /* Parse.framework */; };
-		3A3172D128620F9A00CAE1E7 /* ParseLiveQuery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CC28620F9A00CAE1E7 /* ParseLiveQuery.framework */; };
-		3A3172D228620F9A00CAE1E7 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CD28620F9A00CAE1E7 /* Starscream.framework */; };
-		3A3172D328620F9A00CAE1E7 /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3172CE28620F9A00CAE1E7 /* BoltsSwift.framework */; };
 		3A439CD427B1C59000E027D6 /* TiLivequeryGeoPointProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A439CD227B1C59000E027D6 /* TiLivequeryGeoPointProxy.m */; };
 		3A439CD527B1C59000E027D6 /* TiLivequeryGeoPointProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */; };
 		3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */; };
@@ -27,6 +22,11 @@
 		3A70246C2EA6EE9500D2F295 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */; };
 		3AA2EF8B28F5F7AB0044DB63 /* TiLivequeryFileProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */; };
 		3AA2EF8C28F5F7AB0044DB63 /* TiLivequeryFileProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */; };
+		3ADA8AD92EA85D7A005720AF /* ParseLiveQuery.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */; };
+		3ADA8ADA2EA85D7A005720AF /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD82EA85D7A005720AF /* Starscream.xcframework */; };
+		3ADA8ADB2EA85D7A005720AF /* BoltsSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */; };
+		3ADA8AE02EA86AA7005720AF /* Parse.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD62EA85D7A005720AF /* Parse.xcframework */; };
+		3ADA8AE12EA86B00005720AF /* Bolts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AE22EA86B00005720AF /* Bolts.xcframework */; };
 		AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */; };
 		DB127EE6207CC34B00D41D9A /* TiLivequeryClientProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */; };
 		DB127EE7207CC34B00D41D9A /* TiLivequeryClientProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */; };
@@ -46,11 +46,6 @@
 		3A0FF1C128619E9F0051286C /* TiLivequeryRelationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryRelationProxy.m; path = Classes/TiLivequeryRelationProxy.m; sourceTree = "<group>"; };
 		3A25F56A286B221F00BB00DB /* TiLivequeryUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryUtils.m; path = Classes/TiLivequeryUtils.m; sourceTree = "<group>"; };
 		3A25F56C286B22EC00BB00DB /* TiLivequeryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryUtils.h; path = Classes/TiLivequeryUtils.h; sourceTree = "<group>"; };
-		3A3172CA28620F9A00CAE1E7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = platform/Bolts.framework; sourceTree = "<group>"; };
-		3A3172CB28620F9A00CAE1E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = platform/Parse.framework; sourceTree = "<group>"; };
-		3A3172CC28620F9A00CAE1E7 /* ParseLiveQuery.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseLiveQuery.framework; path = platform/ParseLiveQuery.framework; sourceTree = "<group>"; };
-		3A3172CD28620F9A00CAE1E7 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = platform/Starscream.framework; sourceTree = "<group>"; };
-		3A3172CE28620F9A00CAE1E7 /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoltsSwift.framework; path = platform/BoltsSwift.framework; sourceTree = "<group>"; };
 		3A439CD227B1C59000E027D6 /* TiLivequeryGeoPointProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryGeoPointProxy.m; path = Classes/TiLivequeryGeoPointProxy.m; sourceTree = "<group>"; };
 		3A439CD327B1C59000E027D6 /* TiLivequeryGeoPointProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryGeoPointProxy.h; path = Classes/TiLivequeryGeoPointProxy.h; sourceTree = "<group>"; };
 		3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryPolygonProxy.m; path = Classes/TiLivequeryPolygonProxy.m; sourceTree = "<group>"; };
@@ -58,6 +53,12 @@
 		3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "/Users/hans/Library/Application Support/Titanium/mobilesdk/osx/13.1.0/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<absolute>"; };
 		3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryFileProxy.h; path = Classes/TiLivequeryFileProxy.h; sourceTree = "<group>"; };
 		3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryFileProxy.m; path = Classes/TiLivequeryFileProxy.m; sourceTree = "<group>"; };
+		3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BoltsSwift.xcframework; path = platform/BoltsSwift.xcframework; sourceTree = "<group>"; };
+		3ADA8AD62EA85D7A005720AF /* Parse.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Parse.xcframework; path = platform/Parse.xcframework; sourceTree = "<group>"; };
+		3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ParseLiveQuery.xcframework; path = platform/ParseLiveQuery.xcframework; sourceTree = "<group>"; };
+		3ADA8AD82EA85D7A005720AF /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = platform/Starscream.xcframework; sourceTree = "<group>"; };
+		3ADA8AE22EA86B00005720AF /* Bolts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Bolts.xcframework; path = platform/Bolts.xcframework; sourceTree = "<group>"; };
+		3ADA8ADF2EA869FF005720AF /* titanium-parse-live-query-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "titanium-parse-live-query-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLivequery_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libti.livequery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.livequery.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryClientProxy.h; path = Classes/TiLivequeryClientProxy.h; sourceTree = "<group>"; };
@@ -73,12 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A3172D028620F9A00CAE1E7 /* Parse.framework in Frameworks */,
-				3A3172D228620F9A00CAE1E7 /* Starscream.framework in Frameworks */,
-				3A3172D328620F9A00CAE1E7 /* BoltsSwift.framework in Frameworks */,
 				3A70246C2EA6EE9500D2F295 /* TitaniumKit.xcframework in Frameworks */,
-				3A3172CF28620F9A00CAE1E7 /* Bolts.framework in Frameworks */,
-				3A3172D128620F9A00CAE1E7 /* ParseLiveQuery.framework in Frameworks */,
+				3ADA8AD92EA85D7A005720AF /* ParseLiveQuery.xcframework in Frameworks */,
+				3ADA8AE02EA86AA7005720AF /* Parse.xcframework in Frameworks */,
+				3ADA8ADA2EA85D7A005720AF /* Starscream.xcframework in Frameworks */,
+				3ADA8ADB2EA85D7A005720AF /* BoltsSwift.xcframework in Frameworks */,
+				3ADA8AE12EA86B00005720AF /* Bolts.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,11 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */,
-				3A3172CA28620F9A00CAE1E7 /* Bolts.framework */,
-				3A3172CE28620F9A00CAE1E7 /* BoltsSwift.framework */,
-				3A3172CB28620F9A00CAE1E7 /* Parse.framework */,
-				3A3172CC28620F9A00CAE1E7 /* ParseLiveQuery.framework */,
-				3A3172CD28620F9A00CAE1E7 /* Starscream.framework */,
+				3ADA8AE22EA86B00005720AF /* Bolts.xcframework */,
+				3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */,
+				3ADA8AD62EA85D7A005720AF /* Parse.xcframework */,
+				3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */,
+				3ADA8AD82EA85D7A005720AF /* Starscream.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +130,7 @@
 				DBC8A098208E0B29007EAC38 /* Client */,
 				DBC8A097208E0B23007EAC38 /* Object */,
 				3A25F56E286B244800BB00DB /* Utils */,
+				3ADA8ADF2EA869FF005720AF /* titanium-parse-live-query-Bridging-Header.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -274,6 +276,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					D2AAC07D0554694100DB518D = {
+						LastSwiftMigration = 2600;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "titanium-parse-live-query" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -318,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -343,7 +351,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -355,6 +363,9 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "titanium-parse-live-query-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				USER_HEADER_SEARCH_PATHS = "";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
 			};
@@ -365,6 +376,7 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -392,13 +404,15 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ti.livequery;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "titanium-parse-live-query-Bridging-Header.h";
+				SWIFT_VERSION = 6.0;
 				USER_HEADER_SEARCH_PATHS = "";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
 			};
@@ -408,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -454,7 +469,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -476,6 +491,7 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -519,7 +535,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ti.livequery;

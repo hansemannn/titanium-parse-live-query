@@ -1,0 +1,5 @@
+// Force minimum deployment targets so modern Xcode toolchains skip libarclite
+IPHONEOS_DEPLOYMENT_TARGET = 12.0
+MACOSX_DEPLOYMENT_TARGET = 10.14
+TVOS_DEPLOYMENT_TARGET = 12.0
+WATCHOS_DEPLOYMENT_TARGET = 4.0

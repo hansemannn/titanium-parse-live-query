@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/hans/Library/Caches/org.carthage.CarthageKit/DerivedData/26.0_17A324/Bolts-Swift/1.5.0/Build/Products/Release-iphonesimulator/BoltsSwift.framework/BoltsSwift'
+relocations:     []
+...

@@ -1,0 +1,4 @@
+framework module BoltsSwift {
+  header "BoltsSwift-Swift.h"
+  requires objc
+}
