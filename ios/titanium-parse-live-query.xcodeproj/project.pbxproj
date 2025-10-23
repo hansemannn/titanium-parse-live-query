@@ -20,13 +20,13 @@
 		3A55C2E927B1C8950004691A /* TiLivequeryPolygonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */; };
 		3A55C2EA27B1C8950004691A /* TiLivequeryPolygonProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */; };
 		3A70246C2EA6EE9500D2F295 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */; };
+		3A9C56832EAA149C002D4CC2 /* Bolts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9C56822EAA149C002D4CC2 /* Bolts.xcframework */; };
 		3AA2EF8B28F5F7AB0044DB63 /* TiLivequeryFileProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */; };
 		3AA2EF8C28F5F7AB0044DB63 /* TiLivequeryFileProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */; };
 		3ADA8AD92EA85D7A005720AF /* ParseLiveQuery.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */; };
 		3ADA8ADA2EA85D7A005720AF /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD82EA85D7A005720AF /* Starscream.xcframework */; };
 		3ADA8ADB2EA85D7A005720AF /* BoltsSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */; };
 		3ADA8AE02EA86AA7005720AF /* Parse.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD62EA85D7A005720AF /* Parse.xcframework */; };
-		3ADA8AE12EA86B00005720AF /* Bolts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AE22EA86B00005720AF /* Bolts.xcframework */; };
 		AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */; };
 		DB127EE6207CC34B00D41D9A /* TiLivequeryClientProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */; };
 		DB127EE7207CC34B00D41D9A /* TiLivequeryClientProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */; };
@@ -51,13 +51,13 @@
 		3A55C2E727B1C8950004691A /* TiLivequeryPolygonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryPolygonProxy.m; path = Classes/TiLivequeryPolygonProxy.m; sourceTree = "<group>"; };
 		3A55C2E827B1C8950004691A /* TiLivequeryPolygonProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiLivequeryPolygonProxy.h; path = Classes/TiLivequeryPolygonProxy.h; sourceTree = "<group>"; };
 		3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "/Users/hans/Library/Application Support/Titanium/mobilesdk/osx/13.1.0/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<absolute>"; };
+		3A9C56822EAA149C002D4CC2 /* Bolts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Bolts.xcframework; path = "platform-local/Bolts.xcframework"; sourceTree = "<group>"; };
 		3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryFileProxy.h; path = Classes/TiLivequeryFileProxy.h; sourceTree = "<group>"; };
 		3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryFileProxy.m; path = Classes/TiLivequeryFileProxy.m; sourceTree = "<group>"; };
 		3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BoltsSwift.xcframework; path = platform/BoltsSwift.xcframework; sourceTree = "<group>"; };
 		3ADA8AD62EA85D7A005720AF /* Parse.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Parse.xcframework; path = platform/Parse.xcframework; sourceTree = "<group>"; };
 		3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ParseLiveQuery.xcframework; path = platform/ParseLiveQuery.xcframework; sourceTree = "<group>"; };
 		3ADA8AD82EA85D7A005720AF /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = platform/Starscream.xcframework; sourceTree = "<group>"; };
-		3ADA8AE22EA86B00005720AF /* Bolts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Bolts.xcframework; path = platform/Bolts.xcframework; sourceTree = "<group>"; };
 		3ADA8ADF2EA869FF005720AF /* titanium-parse-live-query-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "titanium-parse-live-query-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLivequery_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libti.livequery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.livequery.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,8 +78,8 @@
 				3ADA8AD92EA85D7A005720AF /* ParseLiveQuery.xcframework in Frameworks */,
 				3ADA8AE02EA86AA7005720AF /* Parse.xcframework in Frameworks */,
 				3ADA8ADA2EA85D7A005720AF /* Starscream.xcframework in Frameworks */,
+				3A9C56832EAA149C002D4CC2 /* Bolts.xcframework in Frameworks */,
 				3ADA8ADB2EA85D7A005720AF /* BoltsSwift.xcframework in Frameworks */,
-				3ADA8AE12EA86B00005720AF /* Bolts.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */,
-				3ADA8AE22EA86B00005720AF /* Bolts.xcframework */,
+				3A9C56822EAA149C002D4CC2 /* Bolts.xcframework */,
 				3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */,
 				3ADA8AD62EA85D7A005720AF /* Parse.xcframework */,
 				3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */,
