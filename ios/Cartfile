@@ -1,9 +1,8 @@
 # Build with: 
 # XCODE_XCCONFIG_FILE=$(pwd)/carthage.xcconfig carthage bootstrap --platform iOS --use-xcframeworks
 
-# Note: Bolts.xcframework is not published upstream; rebuild after `carthage bootstrap` with:
-# xcodebuild -project Carthage/Checkouts/ParseLiveQuery-iOS-OSX/Carthage/Checkouts/Bolts-ObjC/Bolts.xcodeproj -scheme Bolts-iOS -configuration Release -sdk iphoneos CODE_SIGNING_ALLOWED=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES build
-# xcodebuild -project Carthage/Checkouts/ParseLiveQuery-iOS-OSX/Carthage/Checkouts/Bolts-ObjC/Bolts.xcodeproj -scheme Bolts-iOS -configuration Release -destination "generic/platform=iOS Simulator" CODE_SIGNING_ALLOWED=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES build
-# xcodebuild -create-xcframework -framework ./Carthage/Build/Release-iphoneos/Bolts.framework -framework ./Carthage/Build/Release-iphonesimulator/Bolts.framework -output platform/Bolts.xcframework
+# Note: Parse.framework already embeds Bolts; we ship only headers under platform/BoltsHeaders.
+# After running `carthage bootstrap`, copy the latest Bolts-ObjC `Bolts/*.h` files
+# into `platform/BoltsHeaders/include/Bolts` to keep the module shim in sync.
 
 github "parse-community/ParseLiveQuery-iOS-OSX"
