@@ -4,8 +4,7 @@
  * Please see the LICENSE included with this distribution for details.
  */
 #import <TitaniumKit/TitaniumKit.h>
-#import <Parse/Parse.h>
-#import <ParseLiveQuery/ParseLiveQuery-Swift.h>
+#import "PFQuery.h"
 
 @interface TiLivequeryQueryProxy : TiProxy {
   PFQuery *_query;

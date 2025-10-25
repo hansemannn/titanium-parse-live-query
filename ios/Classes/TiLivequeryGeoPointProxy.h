@@ -5,7 +5,7 @@
  */
 
 #import <TitaniumKit/TitaniumKit.h>
-#import <Parse/Parse.h>
+#import "PFGeoPoint.h"
 
 @interface TiLivequeryGeoPointProxy : TiProxy {
   PFGeoPoint *_geoPoint;

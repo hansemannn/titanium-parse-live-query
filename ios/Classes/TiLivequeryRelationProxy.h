@@ -8,7 +8,7 @@
 #import "TiLivequeryQueryProxy.h"
 #import "TiLivequeryObjectProxy.h"
 
-#import <Parse/Parse.h>
+#import "PFRelation.h"
 
 @interface TiLivequeryRelationProxy : TiProxy {
   PFRelation *_relation;

@@ -5,7 +5,7 @@
  */
 
 #import <TitaniumKit/TitaniumKit.h>
-#import <Parse/Parse.h>
+#import "PFObject.h"
 
 @interface TiLivequeryObjectProxy : TiProxy {
   PFObject *_object;

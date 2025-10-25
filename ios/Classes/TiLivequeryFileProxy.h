@@ -5,7 +5,7 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import <Parse/Parse.h>
+#import "PFFileObject.h"
 #import "TiProxy.h"
 
 @interface TiLivequeryFileProxy : TiProxy {

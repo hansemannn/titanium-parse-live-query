@@ -9,6 +9,8 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 
+@import ParseLiveQuery;
+
 @implementation TiLivequeryModule
 
 #pragma mark Internal

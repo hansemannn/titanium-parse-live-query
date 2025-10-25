@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import <TitaniumKit/TitaniumKit.h>
-#import <Parse/Parse.h>
 
 @interface TiLivequeryUtils : NSObject
 

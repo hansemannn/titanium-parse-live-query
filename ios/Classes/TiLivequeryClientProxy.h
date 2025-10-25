@@ -5,7 +5,7 @@
  */
 
 #import <TitaniumKit/TitaniumKit.h>
-#import <ParseLiveQuery/ParseLiveQuery-Swift.h>
+@import ParseLiveQuery;
 
 @interface TiLivequeryClientProxy : TiProxy <PFLiveQuerySubscriptionHandling> {
   PFLiveQueryClient *_client;

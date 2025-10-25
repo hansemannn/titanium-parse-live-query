@@ -9,6 +9,7 @@ description: titanium-parse-live-query
 author: Hans Knoechel
 license: Apache 2
 copyright: Copyright (c) 2018-present by Hans Knoechel
+strip_spm_dependencies: true
 
 # these should not be edited
 name: titanium-parse-live-query

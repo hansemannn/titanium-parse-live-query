@@ -5,8 +5,6 @@
  */
 
 #import "TiModule.h"
-#import <Parse/Parse.h>
-#import <ParseLiveQuery/ParseLiveQuery-Swift.h>
 
 #import "TiLivequeryObjectProxy.h"
 #import "TiLivequeryGeoPointProxy.h"

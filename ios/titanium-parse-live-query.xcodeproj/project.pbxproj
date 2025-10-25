@@ -22,10 +22,8 @@
 		3A70246C2EA6EE9500D2F295 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */; };
 		3AA2EF8B28F5F7AB0044DB63 /* TiLivequeryFileProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */; };
 		3AA2EF8C28F5F7AB0044DB63 /* TiLivequeryFileProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */; };
-		3ADA8AD92EA85D7A005720AF /* ParseLiveQuery.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */; };
-		3ADA8ADA2EA85D7A005720AF /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD82EA85D7A005720AF /* Starscream.xcframework */; };
-		3ADA8ADB2EA85D7A005720AF /* BoltsSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */; };
-		3ADA8AE02EA86AA7005720AF /* Parse.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA8AD62EA85D7A005720AF /* Parse.xcframework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3ACB45112EAA8E73007782B5 /* ParseLiveQuery in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACB45102EAA8E73007782B5 /* ParseLiveQuery */; };
+		3ACB45132EAA8E73007782B5 /* ParseObjC in Frameworks */ = {isa = PBXBuildFile; productRef = 3ACB45122EAA8E73007782B5 /* ParseObjC */; };
 		AA747D9F0F9514B9006C5449 /* TiLivequery_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */; };
 		DB127EE6207CC34B00D41D9A /* TiLivequeryClientProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */; };
 		DB127EE7207CC34B00D41D9A /* TiLivequeryClientProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB127EE5207CC34B00D41D9A /* TiLivequeryClientProxy.m */; };
@@ -52,11 +50,6 @@
 		3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "/Users/hans/Library/Application Support/Titanium/mobilesdk/osx/13.1.0/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<absolute>"; };
 		3AA2EF8928F5F7AB0044DB63 /* TiLivequeryFileProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryFileProxy.h; path = Classes/TiLivequeryFileProxy.h; sourceTree = "<group>"; };
 		3AA2EF8A28F5F7AB0044DB63 /* TiLivequeryFileProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiLivequeryFileProxy.m; path = Classes/TiLivequeryFileProxy.m; sourceTree = "<group>"; };
-		3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BoltsSwift.xcframework; path = platform/BoltsSwift.xcframework; sourceTree = "<group>"; };
-		3ADA8AD62EA85D7A005720AF /* Parse.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Parse.xcframework; path = platform/Parse.xcframework; sourceTree = "<group>"; };
-		3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ParseLiveQuery.xcframework; path = platform/ParseLiveQuery.xcframework; sourceTree = "<group>"; };
-		3ADA8AD82EA85D7A005720AF /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = platform/Starscream.xcframework; sourceTree = "<group>"; };
-		3ADA8ADF2EA869FF005720AF /* titanium-parse-live-query-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "titanium-parse-live-query-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiLivequery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiLivequery_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libti.livequery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.livequery.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB127EE4207CC34B00D41D9A /* TiLivequeryClientProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiLivequeryClientProxy.h; path = Classes/TiLivequeryClientProxy.h; sourceTree = "<group>"; };
@@ -72,11 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ACB45132EAA8E73007782B5 /* ParseObjC in Frameworks */,
 				3A70246C2EA6EE9500D2F295 /* TitaniumKit.xcframework in Frameworks */,
-				3ADA8AD92EA85D7A005720AF /* ParseLiveQuery.xcframework in Frameworks */,
-				3ADA8AE02EA86AA7005720AF /* Parse.xcframework in Frameworks */,
-				3ADA8ADA2EA85D7A005720AF /* Starscream.xcframework in Frameworks */,
-				3ADA8ADB2EA85D7A005720AF /* BoltsSwift.xcframework in Frameworks */,
+				3ACB45112EAA8E73007782B5 /* ParseLiveQuery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,10 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				3A70246B2EA6EE9500D2F295 /* TitaniumKit.xcframework */,
-				3ADA8AD52EA85D7A005720AF /* BoltsSwift.xcframework */,
-				3ADA8AD62EA85D7A005720AF /* Parse.xcframework */,
-				3ADA8AD72EA85D7A005720AF /* ParseLiveQuery.xcframework */,
-				3ADA8AD82EA85D7A005720AF /* Starscream.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,7 +113,6 @@
 				DBC8A098208E0B29007EAC38 /* Client */,
 				DBC8A097208E0B23007EAC38 /* Object */,
 				3A25F56E286B244800BB00DB /* Utils */,
-				3ADA8ADF2EA869FF005720AF /* titanium-parse-live-query-Bridging-Header.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -287,6 +273,9 @@
 				Base,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* titanium-parse-live-query */;
+			packageReferences = (
+				3ACB450F2EAA8E73007782B5 /* XCRemoteSwiftPackageReference "Parse-SDK-iOS-OSX" */,
+			);
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -450,13 +439,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/TiLivequery.dst;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/platform",
 				);
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -521,12 +510,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DSTROOT = /tmp/TiLivequery.dst;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/platform",
 				);
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -580,6 +569,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3ACB450F2EAA8E73007782B5 /* XCRemoteSwiftPackageReference "Parse-SDK-iOS-OSX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-SDK-iOS-OSX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3ACB45102EAA8E73007782B5 /* ParseLiveQuery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3ACB450F2EAA8E73007782B5 /* XCRemoteSwiftPackageReference "Parse-SDK-iOS-OSX" */;
+			productName = ParseLiveQuery;
+		};
+		3ACB45122EAA8E73007782B5 /* ParseObjC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3ACB450F2EAA8E73007782B5 /* XCRemoteSwiftPackageReference "Parse-SDK-iOS-OSX" */;
+			productName = ParseObjC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
 }
