@@ -1,0 +1,24 @@
+{
+	"dependencies": [
+		{
+			"remotePackageReference": "Parse-SDK-iOS-OSX",
+			"repositoryURL": "https://github.com/parse-community/Parse-SDK-iOS-OSX",
+			"requirement": {
+				"kind": "upToNextMajorVersion",
+				"minimumVersion": "5.1.1"
+			},
+			"products": [
+				{
+					"frameworkName": "ParseLiveQuery",
+					"productName": "ParseLiveQuery",
+					"linkage": "embedded"
+				},
+				{
+					"frameworkName": "ParseObjC",
+					"productName": "ParseObjC",
+					"linkage": "embedded"
+				}
+			]
+		}
+	]
+}
