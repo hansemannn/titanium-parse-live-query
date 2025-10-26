@@ -1,0 +1,19 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 5.0.0
+apiversion: 2
+architectures: arm64 x86_64
+description: titanium-parse-live-query
+author: Hans Knoechel
+license: Apache 2
+copyright: Copyright (c) 2018-present by Hans Knoechel
+
+# these should not be edited
+name: titanium-parse-live-query
+moduleid: ti.livequery
+guid: 19332cb9-2c77-4366-a65f-4e84894562a3
+platform: iphone
+mac: false
+minsdk: 12.0.0
